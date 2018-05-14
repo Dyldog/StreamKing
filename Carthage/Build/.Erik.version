@@ -1,9 +1,0 @@
-{
-  "commitish" : "4.0.0",
-  "iOS" : [
-    {
-      "name" : "Erik",
-      "hash" : "6bb6efbf53fa3799e6763237c95719359b84af377a6df5048100ec30fac38505"
-    }
-  ]
-}

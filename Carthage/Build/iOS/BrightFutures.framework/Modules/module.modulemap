@@ -1,4 +1,0 @@
-framework module BrightFutures {
-    header "BrightFutures-Swift.h"
-    requires objc
-}

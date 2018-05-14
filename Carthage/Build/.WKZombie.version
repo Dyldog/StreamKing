@@ -1,9 +1,0 @@
-{
-  "commitish" : "1.1.1",
-  "iOS" : [
-    {
-      "name" : "WKZombie",
-      "hash" : "c5675a6278d0ca513be94a2210ec9a05308ceda87c9c7fe22e9d070fdd2346cc"
-    }
-  ]
-}
