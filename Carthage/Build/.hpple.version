@@ -1,0 +1,9 @@
+{
+  "commitish" : "0.2.2",
+  "iOS" : [
+    {
+      "name" : "hpple",
+      "hash" : "dda2b54bda58460461c6eb6025aa55f46180d2650f1aa91c3b9f5433c6073cd7"
+    }
+  ]
+}

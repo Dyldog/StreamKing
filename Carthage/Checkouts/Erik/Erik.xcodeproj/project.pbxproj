@@ -1,0 +1,878 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C42828E21BF9EDE1005EC7C3 /* Erik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C42828D71BF9EDE1005EC7C3 /* Erik.framework */; };
+		C42828E71BF9EDE1005EC7C3 /* ErikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42828E61BF9EDE1005EC7C3 /* ErikTests.swift */; };
+		C42828F61BF9EEAF005EC7C3 /* LayoutEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42828F51BF9EEAF005EC7C3 /* LayoutEngine.swift */; };
+		C43178821BFA3E1A00C04250 /* ErikOSX.h in Headers */ = {isa = PBXBuildFile; fileRef = C43178811BFA3E1A00C04250 /* ErikOSX.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C43178891BFA3E2200C04250 /* LayoutEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42828F51BF9EEAF005EC7C3 /* LayoutEngine.swift */; };
+		C463134C1BFCE3A50078FB9D /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463134B1BFCE3A50078FB9D /* Document.swift */; };
+		C463134D1BFCE3FF0078FB9D /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463134B1BFCE3A50078FB9D /* Document.swift */; };
+		C46F2E141DACF200006A036D /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46F2E101DACF200006A036D /* BrightFutures.framework */; };
+		C46F2E151DACF200006A036D /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46F2E101DACF200006A036D /* BrightFutures.framework */; };
+		C46F2E171DACF200006A036D /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46F2E111DACF200006A036D /* FileKit.framework */; };
+		C46F2E181DACF200006A036D /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46F2E121DACF200006A036D /* Kanna.framework */; };
+		C46F2E191DACF200006A036D /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46F2E121DACF200006A036D /* Kanna.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C46F2E1A1DACF200006A036D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46F2E131DACF200006A036D /* Result.framework */; };
+		C46F2E1B1DACF200006A036D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46F2E131DACF200006A036D /* Result.framework */; };
+		C46F2E201DACF210006A036D /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46F2E1C1DACF210006A036D /* BrightFutures.framework */; };
+		C46F2E211DACF210006A036D /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46F2E1C1DACF210006A036D /* BrightFutures.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C46F2E231DACF210006A036D /* FileKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46F2E1D1DACF210006A036D /* FileKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C46F2E241DACF210006A036D /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46F2E1E1DACF210006A036D /* Kanna.framework */; };
+		C46F2E251DACF210006A036D /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46F2E1E1DACF210006A036D /* Kanna.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C46F2E261DACF210006A036D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46F2E1F1DACF210006A036D /* Result.framework */; };
+		C46F2E271DACF210006A036D /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46F2E1F1DACF210006A036D /* Result.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C48B18ED1E525BAB000ED799 /* Erik.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C431787F1BFA3E1A00C04250 /* Erik.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		C48B18F81E5266B4000ED799 /* BrightFutures.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C46F2E1C1DACF210006A036D /* BrightFutures.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C48B18F91E5266B4000ED799 /* FileKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C46F2E1D1DACF210006A036D /* FileKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C48B18FA1E5266B4000ED799 /* Kanna.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C46F2E1E1DACF210006A036D /* Kanna.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C48B18FB1E5266B4000ED799 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C46F2E1F1DACF210006A036D /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C48B18FD1E5266D1000ED799 /* BrightFutures.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C46F2E101DACF200006A036D /* BrightFutures.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C48B18FE1E5266D1000ED799 /* FileKit.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C46F2E111DACF200006A036D /* FileKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C48B18FF1E5266D1000ED799 /* Kanna.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C46F2E121DACF200006A036D /* Kanna.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C48B19001E5266D1000ED799 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C46F2E131DACF200006A036D /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C4AAB7241E52C3E100348D04 /* KannaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AAB7231E52C3E100348D04 /* KannaTests.swift */; };
+		C4AAB7261E52C40000348D04 /* google.html in Resources */ = {isa = PBXBuildFile; fileRef = C4AAB7251E52C40000348D04 /* google.html */; };
+		C4AAB7271E52C40000348D04 /* google.html in Resources */ = {isa = PBXBuildFile; fileRef = C4AAB7251E52C40000348D04 /* google.html */; };
+		C4AAB7281E52C48E00348D04 /* KannaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4AAB7231E52C3E100348D04 /* KannaTests.swift */; };
+		C4D50DDD1BFB51130053B624 /* Erik.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D50DDC1BFB51130053B624 /* Erik.swift */; };
+		C4D50DDE1BFB51130053B624 /* Erik.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D50DDC1BFB51130053B624 /* Erik.swift */; };
+		C4D50DF21BFB59030053B624 /* ErikTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42828E61BF9EDE1005EC7C3 /* ErikTests.swift */; };
+		C4E4B2751D8EE60A009D8AA7 /* Erik.h in Headers */ = {isa = PBXBuildFile; fileRef = C4E4B2731D8EE60A009D8AA7 /* Erik.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C4F7D01C1C088A0100EF359B /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7D01B1C088A0100EF359B /* Future.swift */; };
+		C4F7D01D1C088A0100EF359B /* Future.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4F7D01B1C088A0100EF359B /* Future.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C42828E31BF9EDE1005EC7C3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C42828CE1BF9EDE1005EC7C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C42828D61BF9EDE1005EC7C3;
+			remoteInfo = Erik;
+		};
+		C4D50DED1BFB58EE0053B624 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C42828CE1BF9EDE1005EC7C3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C431787E1BFA3E1A00C04250;
+			remoteInfo = ErikOSX;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C48B18F71E5266AC000ED799 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C48B18F81E5266B4000ED799 /* BrightFutures.framework in CopyFiles */,
+				C48B18F91E5266B4000ED799 /* FileKit.framework in CopyFiles */,
+				C48B18FA1E5266B4000ED799 /* Kanna.framework in CopyFiles */,
+				C48B18FB1E5266B4000ED799 /* Result.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C48B18FC1E5266CA000ED799 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C48B18FD1E5266D1000ED799 /* BrightFutures.framework in CopyFiles */,
+				C48B18FE1E5266D1000ED799 /* FileKit.framework in CopyFiles */,
+				C48B18FF1E5266D1000ED799 /* Kanna.framework in CopyFiles */,
+				C48B19001E5266D1000ED799 /* Result.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		C42828D71BF9EDE1005EC7C3 /* Erik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Erik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C42828E11BF9EDE1005EC7C3 /* ErikTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ErikTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C42828E61BF9EDE1005EC7C3 /* ErikTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ErikTests.swift; path = ErikTests/ErikTests.swift; sourceTree = SOURCE_ROOT; };
+		C42828E81BF9EDE1005EC7C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C42828F51BF9EEAF005EC7C3 /* LayoutEngine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutEngine.swift; sourceTree = "<group>"; };
+		C431787F1BFA3E1A00C04250 /* Erik.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Erik.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C43178811BFA3E1A00C04250 /* ErikOSX.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ErikOSX.h; sourceTree = "<group>"; };
+		C43178831BFA3E1A00C04250 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C463134B1BFCE3A50078FB9D /* Document.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		C46F2E101DACF200006A036D /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/iOS/BrightFutures.framework; sourceTree = "<group>"; };
+		C46F2E111DACF200006A036D /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/iOS/FileKit.framework; sourceTree = "<group>"; };
+		C46F2E121DACF200006A036D /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/iOS/Kanna.framework; sourceTree = "<group>"; };
+		C46F2E131DACF200006A036D /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		C46F2E1C1DACF210006A036D /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/Mac/BrightFutures.framework; sourceTree = "<group>"; };
+		C46F2E1D1DACF210006A036D /* FileKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileKit.framework; path = Carthage/Build/Mac/FileKit.framework; sourceTree = "<group>"; };
+		C46F2E1E1DACF210006A036D /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/Mac/Kanna.framework; sourceTree = "<group>"; };
+		C46F2E1F1DACF210006A036D /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/Mac/Result.framework; sourceTree = "<group>"; };
+		C4AAB7231E52C3E100348D04 /* KannaTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KannaTests.swift; sourceTree = "<group>"; };
+		C4AAB7251E52C40000348D04 /* google.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = google.html; sourceTree = SOURCE_ROOT; };
+		C4D50DDC1BFB51130053B624 /* Erik.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Erik.swift; sourceTree = "<group>"; };
+		C4D50DE71BFB58EE0053B624 /* ErikOSXTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ErikOSXTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4D50DEB1BFB58EE0053B624 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4DF857F1C04ADDA0002E142 /* Erik.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = Erik.podspec; sourceTree = "<group>"; };
+		C4E4B2731D8EE60A009D8AA7 /* Erik.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Erik.h; sourceTree = "<group>"; };
+		C4E4B2741D8EE60A009D8AA7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4F7D01B1C088A0100EF359B /* Future.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Future.swift; path = Future/Future.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C42828D31BF9EDE1005EC7C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C46F2E141DACF200006A036D /* BrightFutures.framework in Frameworks */,
+				C46F2E181DACF200006A036D /* Kanna.framework in Frameworks */,
+				C46F2E1A1DACF200006A036D /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C42828DE1BF9EDE1005EC7C3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C46F2E191DACF200006A036D /* Kanna.framework in Frameworks */,
+				C46F2E1B1DACF200006A036D /* Result.framework in Frameworks */,
+				C46F2E151DACF200006A036D /* BrightFutures.framework in Frameworks */,
+				C46F2E171DACF200006A036D /* FileKit.framework in Frameworks */,
+				C42828E21BF9EDE1005EC7C3 /* Erik.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C431787B1BFA3E1A00C04250 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C46F2E201DACF210006A036D /* BrightFutures.framework in Frameworks */,
+				C46F2E241DACF210006A036D /* Kanna.framework in Frameworks */,
+				C46F2E261DACF210006A036D /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4D50DE41BFB58EE0053B624 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C48B18ED1E525BAB000ED799 /* Erik.framework in Frameworks */,
+				C46F2E251DACF210006A036D /* Kanna.framework in Frameworks */,
+				C46F2E271DACF210006A036D /* Result.framework in Frameworks */,
+				C46F2E211DACF210006A036D /* BrightFutures.framework in Frameworks */,
+				C46F2E231DACF210006A036D /* FileKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		630BA295A9583F1A0F53DE04 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C46F2E0F1DACF1DA006A036D /* Mac */,
+				C46F2E0E1DACF1D5006A036D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C42828CD1BF9EDE1005EC7C3 = {
+			isa = PBXGroup;
+			children = (
+				C42828D91BF9EDE1005EC7C3 /* Sources */,
+				C4E4B2721D8EE60A009D8AA7 /* Erik */,
+				C43178801BFA3E1A00C04250 /* ErikOSX */,
+				C42828E51BF9EDE1005EC7C3 /* ErikTests */,
+				C4D50DE81BFB58EE0053B624 /* ErikOSXTests */,
+				C42828D81BF9EDE1005EC7C3 /* Products */,
+				C4DF857F1C04ADDA0002E142 /* Erik.podspec */,
+				630BA295A9583F1A0F53DE04 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C42828D81BF9EDE1005EC7C3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C42828D71BF9EDE1005EC7C3 /* Erik.framework */,
+				C42828E11BF9EDE1005EC7C3 /* ErikTests.xctest */,
+				C431787F1BFA3E1A00C04250 /* Erik.framework */,
+				C4D50DE71BFB58EE0053B624 /* ErikOSXTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C42828D91BF9EDE1005EC7C3 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				C4D50DDC1BFB51130053B624 /* Erik.swift */,
+				C42828F51BF9EEAF005EC7C3 /* LayoutEngine.swift */,
+				C463134B1BFCE3A50078FB9D /* Document.swift */,
+				C4F7D01A1C0889A700EF359B /* Future */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		C42828E51BF9EDE1005EC7C3 /* ErikTests */ = {
+			isa = PBXGroup;
+			children = (
+				C4AAB7251E52C40000348D04 /* google.html */,
+				C42828E61BF9EDE1005EC7C3 /* ErikTests.swift */,
+				C4AAB7231E52C3E100348D04 /* KannaTests.swift */,
+				C42828E81BF9EDE1005EC7C3 /* Info.plist */,
+			);
+			path = ErikTests;
+			sourceTree = "<group>";
+		};
+		C43178801BFA3E1A00C04250 /* ErikOSX */ = {
+			isa = PBXGroup;
+			children = (
+				C43178811BFA3E1A00C04250 /* ErikOSX.h */,
+				C43178831BFA3E1A00C04250 /* Info.plist */,
+			);
+			path = ErikOSX;
+			sourceTree = "<group>";
+		};
+		C46F2E0E1DACF1D5006A036D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C46F2E101DACF200006A036D /* BrightFutures.framework */,
+				C46F2E111DACF200006A036D /* FileKit.framework */,
+				C46F2E121DACF200006A036D /* Kanna.framework */,
+				C46F2E131DACF200006A036D /* Result.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C46F2E0F1DACF1DA006A036D /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				C46F2E1C1DACF210006A036D /* BrightFutures.framework */,
+				C46F2E1D1DACF210006A036D /* FileKit.framework */,
+				C46F2E1E1DACF210006A036D /* Kanna.framework */,
+				C46F2E1F1DACF210006A036D /* Result.framework */,
+			);
+			name = Mac;
+			sourceTree = "<group>";
+		};
+		C4D50DE81BFB58EE0053B624 /* ErikOSXTests */ = {
+			isa = PBXGroup;
+			children = (
+				C4D50DEB1BFB58EE0053B624 /* Info.plist */,
+			);
+			path = ErikOSXTests;
+			sourceTree = "<group>";
+		};
+		C4E4B2721D8EE60A009D8AA7 /* Erik */ = {
+			isa = PBXGroup;
+			children = (
+				C4E4B2731D8EE60A009D8AA7 /* Erik.h */,
+				C4E4B2741D8EE60A009D8AA7 /* Info.plist */,
+			);
+			path = Erik;
+			sourceTree = "<group>";
+		};
+		C4F7D01A1C0889A700EF359B /* Future */ = {
+			isa = PBXGroup;
+			children = (
+				C4F7D01B1C088A0100EF359B /* Future.swift */,
+			);
+			name = Future;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C42828D41BF9EDE1005EC7C3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4E4B2751D8EE60A009D8AA7 /* Erik.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C431787C1BFA3E1A00C04250 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C43178821BFA3E1A00C04250 /* ErikOSX.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		C42828D61BF9EDE1005EC7C3 /* Erik */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C42828EB1BF9EDE1005EC7C3 /* Build configuration list for PBXNativeTarget "Erik" */;
+			buildPhases = (
+				C42828D21BF9EDE1005EC7C3 /* Sources */,
+				C42828D31BF9EDE1005EC7C3 /* Frameworks */,
+				C42828D41BF9EDE1005EC7C3 /* Headers */,
+				C42828D51BF9EDE1005EC7C3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Erik;
+			productName = Erik;
+			productReference = C42828D71BF9EDE1005EC7C3 /* Erik.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C42828E01BF9EDE1005EC7C3 /* ErikTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C42828EE1BF9EDE1005EC7C3 /* Build configuration list for PBXNativeTarget "ErikTests" */;
+			buildPhases = (
+				C42828DD1BF9EDE1005EC7C3 /* Sources */,
+				C42828DE1BF9EDE1005EC7C3 /* Frameworks */,
+				C42828DF1BF9EDE1005EC7C3 /* Resources */,
+				C48B18FC1E5266CA000ED799 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C42828E41BF9EDE1005EC7C3 /* PBXTargetDependency */,
+			);
+			name = ErikTests;
+			productName = ErikTests;
+			productReference = C42828E11BF9EDE1005EC7C3 /* ErikTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C431787E1BFA3E1A00C04250 /* ErikOSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C43178841BFA3E1A00C04250 /* Build configuration list for PBXNativeTarget "ErikOSX" */;
+			buildPhases = (
+				C431787A1BFA3E1A00C04250 /* Sources */,
+				C431787B1BFA3E1A00C04250 /* Frameworks */,
+				C431787C1BFA3E1A00C04250 /* Headers */,
+				C431787D1BFA3E1A00C04250 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ErikOSX;
+			productName = ErikOSX;
+			productReference = C431787F1BFA3E1A00C04250 /* Erik.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C4D50DE61BFB58EE0053B624 /* ErikOSXTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C4D50DEF1BFB58EE0053B624 /* Build configuration list for PBXNativeTarget "ErikOSXTests" */;
+			buildPhases = (
+				C4D50DE31BFB58EE0053B624 /* Sources */,
+				C4D50DE41BFB58EE0053B624 /* Frameworks */,
+				C4D50DE51BFB58EE0053B624 /* Resources */,
+				C48B18F71E5266AC000ED799 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C4D50DEE1BFB58EE0053B624 /* PBXTargetDependency */,
+			);
+			name = ErikOSXTests;
+			productName = ErikOSXTests;
+			productReference = C4D50DE71BFB58EE0053B624 /* ErikOSXTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C42828CE1BF9EDE1005EC7C3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0710;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = phimage;
+				TargetAttributes = {
+					C42828D61BF9EDE1005EC7C3 = {
+						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = GGU39CDBL2;
+						LastSwiftMigration = 0920;
+					};
+					C42828E01BF9EDE1005EC7C3 = {
+						CreatedOnToolsVersion = 7.1;
+						LastSwiftMigration = 0920;
+					};
+					C431787E1BFA3E1A00C04250 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					C4D50DE61BFB58EE0053B624 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+				};
+			};
+			buildConfigurationList = C42828D11BF9EDE1005EC7C3 /* Build configuration list for PBXProject "Erik" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C42828CD1BF9EDE1005EC7C3;
+			productRefGroup = C42828D81BF9EDE1005EC7C3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C42828D61BF9EDE1005EC7C3 /* Erik */,
+				C431787E1BFA3E1A00C04250 /* ErikOSX */,
+				C42828E01BF9EDE1005EC7C3 /* ErikTests */,
+				C4D50DE61BFB58EE0053B624 /* ErikOSXTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C42828D51BF9EDE1005EC7C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C42828DF1BF9EDE1005EC7C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4AAB7261E52C40000348D04 /* google.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C431787D1BFA3E1A00C04250 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4D50DE51BFB58EE0053B624 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4AAB7271E52C40000348D04 /* google.html in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C42828D21BF9EDE1005EC7C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4D50DDD1BFB51130053B624 /* Erik.swift in Sources */,
+				C463134C1BFCE3A50078FB9D /* Document.swift in Sources */,
+				C4F7D01C1C088A0100EF359B /* Future.swift in Sources */,
+				C42828F61BF9EEAF005EC7C3 /* LayoutEngine.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C42828DD1BF9EDE1005EC7C3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C42828E71BF9EDE1005EC7C3 /* ErikTests.swift in Sources */,
+				C4AAB7241E52C3E100348D04 /* KannaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C431787A1BFA3E1A00C04250 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4D50DDE1BFB51130053B624 /* Erik.swift in Sources */,
+				C463134D1BFCE3FF0078FB9D /* Document.swift in Sources */,
+				C4F7D01D1C088A0100EF359B /* Future.swift in Sources */,
+				C43178891BFA3E2200C04250 /* LayoutEngine.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4D50DE31BFB58EE0053B624 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C4D50DF21BFB59030053B624 /* ErikTests.swift in Sources */,
+				C4AAB7281E52C48E00348D04 /* KannaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C42828E41BF9EDE1005EC7C3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C42828D61BF9EDE1005EC7C3 /* Erik */;
+			targetProxy = C42828E31BF9EDE1005EC7C3 /* PBXContainerItemProxy */;
+		};
+		C4D50DEE1BFB58EE0053B624 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C431787E1BFA3E1A00C04250 /* ErikOSX */;
+			targetProxy = C4D50DED1BFB58EE0053B624 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		C42828E91BF9EDE1005EC7C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Carthage/Checkouts/Kanna/Modules";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C42828EA1BF9EDE1005EC7C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Carthage/Checkouts/Kanna/Modules";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C42828EC1BF9EDE1005EC7C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2 ";
+				INFOPLIST_FILE = Erik/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"TEST\"";
+				PRODUCT_BUNDLE_IDENTIFIER = tv.phimage.Erik;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		C42828ED1BF9EDE1005EC7C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2 ";
+				INFOPLIST_FILE = Erik/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tv.phimage.Erik;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_SWIFT3_OBJC_INFERENCE = Default;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		C42828EF1BF9EDE1005EC7C3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2 ";
+				INFOPLIST_FILE = ErikTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tv.phimage.ErikTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Carthage/Checkouts/Kanna/Modules";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		C42828F01BF9EDE1005EC7C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2 ";
+				INFOPLIST_FILE = ErikTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = tv.phimage.ErikTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Carthage/Checkouts/Kanna/Modules";
+				SWIFT_SWIFT3_OBJC_INFERENCE = On;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		C43178851BFA3E1A00C04250 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = ErikOSX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"TEST\"";
+				PRODUCT_BUNDLE_IDENTIFIER = tv.phimage.ErikOSX;
+				PRODUCT_NAME = Erik;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		C43178861BFA3E1A00C04250 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				FRAMEWORK_VERSION = A;
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2";
+				INFOPLIST_FILE = ErikOSX/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.phimage.ErikOSX;
+				PRODUCT_NAME = Erik;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+		C4D50DF01BFB58EE0053B624 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2 ";
+				INFOPLIST_FILE = ErikOSXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.phimage.ErikOSXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Carthage/Checkouts/Kanna/Modules";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Debug;
+		};
+		C4D50DF11BFB58EE0053B624 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
+				HEADER_SEARCH_PATHS = "$(SDKROOT)/usr/include/libxml2 ";
+				INFOPLIST_FILE = ErikOSXTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PRODUCT_BUNDLE_IDENTIFIER = tv.phimage.ErikOSXTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_INCLUDE_PATHS = "$(SRCROOT)/Carthage/Checkouts/Kanna/Modules";
+				SWIFT_VERSION = 4.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C42828D11BF9EDE1005EC7C3 /* Build configuration list for PBXProject "Erik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C42828E91BF9EDE1005EC7C3 /* Debug */,
+				C42828EA1BF9EDE1005EC7C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C42828EB1BF9EDE1005EC7C3 /* Build configuration list for PBXNativeTarget "Erik" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C42828EC1BF9EDE1005EC7C3 /* Debug */,
+				C42828ED1BF9EDE1005EC7C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C42828EE1BF9EDE1005EC7C3 /* Build configuration list for PBXNativeTarget "ErikTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C42828EF1BF9EDE1005EC7C3 /* Debug */,
+				C42828F01BF9EDE1005EC7C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C43178841BFA3E1A00C04250 /* Build configuration list for PBXNativeTarget "ErikOSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C43178851BFA3E1A00C04250 /* Debug */,
+				C43178861BFA3E1A00C04250 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C4D50DEF1BFB58EE0053B624 /* Build configuration list for PBXNativeTarget "ErikOSXTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C4D50DF01BFB58EE0053B624 /* Debug */,
+				C4D50DF11BFB58EE0053B624 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C42828CE1BF9EDE1005EC7C3 /* Project object */;
+}

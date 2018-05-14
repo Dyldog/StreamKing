@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NAF-5i-44H">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="tXF-X4-Ntu">
+            <objects>
+                <viewController id="NAF-5i-44H" customClass="URLSelectorViewController" customModule="StreamKing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GgE-CO-bsv">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="f4W-AT-gZt">
+                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jcS-q6-Yzn">
+                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
+                                <items>
+                                    <barButtonItem systemItem="rewind" id="bdD-qs-xbu">
+                                        <connections>
+                                            <action selector="backButtonTapped" destination="NAF-5i-44H" id="ONo-rI-4hh"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="fastForward" id="l1j-Ke-kv4">
+                                        <connections>
+                                            <action selector="forwardButtonTapped" destination="NAF-5i-44H" id="xx6-Cu-PjB"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sp5-zM-PFl" firstAttribute="trailing" secondItem="f4W-AT-gZt" secondAttribute="trailing" id="JaX-aA-TQ8"/>
+                            <constraint firstItem="f4W-AT-gZt" firstAttribute="leading" secondItem="sp5-zM-PFl" secondAttribute="leading" id="KEh-fj-R1Y"/>
+                            <constraint firstItem="jcS-q6-Yzn" firstAttribute="bottom" secondItem="sp5-zM-PFl" secondAttribute="bottom" id="VPu-fh-zsY"/>
+                            <constraint firstItem="jcS-q6-Yzn" firstAttribute="trailing" secondItem="sp5-zM-PFl" secondAttribute="trailing" id="bwb-Zu-y7z"/>
+                            <constraint firstItem="jcS-q6-Yzn" firstAttribute="top" secondItem="f4W-AT-gZt" secondAttribute="bottom" id="gyb-Z8-yaS"/>
+                            <constraint firstItem="f4W-AT-gZt" firstAttribute="top" secondItem="sp5-zM-PFl" secondAttribute="top" id="jb7-TU-wWX"/>
+                            <constraint firstItem="jcS-q6-Yzn" firstAttribute="leading" secondItem="sp5-zM-PFl" secondAttribute="leading" id="jer-QQ-Jf8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sp5-zM-PFl"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Title" id="iqR-CJ-umm">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Wsf-NR-SSt">
+                            <connections>
+                                <action selector="cancelButtonTapped" destination="NAF-5i-44H" id="v2V-kO-dVl"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Done" id="15y-MQ-nkH">
+                            <connections>
+                                <action selector="doneButtonTapped" destination="NAF-5i-44H" id="BGN-ZB-2tB"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="webView" destination="f4W-AT-gZt" id="HMD-vV-YCj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="koN-4A-0R0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="253.59999999999999" y="186.65667166416793"/>
+        </scene>
+    </scenes>
+</document>
