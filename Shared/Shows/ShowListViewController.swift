@@ -43,7 +43,8 @@ class ShowListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            showManager.shows.remove(at: indexPath.row)
+            let show = showManager.shows[indexPath.row]
+            showManager.removeShow(withName: show.title)
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
@@ -65,7 +66,8 @@ class ShowListViewController: UITableViewController {
     }
     
     @IBAction func reloadButtonTapped() {
-        
+        showManager.refreshShows()
+        tableView.reloadData()
     }
 }
 
@@ -88,7 +90,7 @@ extension ShowListViewController: URLSelectorViewControllerDelegate {
         }
         
         let newShow = ShowItem(title: showTitle, url: url)
-        showManager.shows.append(newShow)
+        showManager.addShow(newShow)
         
         self.tableView.reloadData()
     }

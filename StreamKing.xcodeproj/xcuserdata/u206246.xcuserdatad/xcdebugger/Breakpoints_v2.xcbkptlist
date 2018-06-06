@@ -65,38 +65,22 @@
             endingLineNumber = "74"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in StreamKingTV.EpisodeListViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "StreamKingTV"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/u206246/Code/Mine/StreamKing/Shared/Episodes/EpisodeListViewController.swift"
-                  timestampString = "549972914.195225"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "224">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Array&lt;Swift.Array&lt;StreamKingTV.EpisodeItem&gt;&gt; in closure #1 () -&gt; () in StreamKingTV.EpisodeListViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "StreamKingTV"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/u206246/Code/Mine/StreamKing/Shared/Episodes/EpisodeListViewController.swift"
-                  timestampString = "549972914.197044"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "74"
-                  endingLineNumber = "74"
-                  offsetFromSymbolStart = "62">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Shared/ShowManager.swift"
+            timestampString = "549978355.8058569"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "loadShowsFromDisk()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

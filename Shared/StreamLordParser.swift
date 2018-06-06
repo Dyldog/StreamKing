@@ -26,18 +26,16 @@ class StreamLordParser {
         }
     }
     
-    static func parseEpisodes(from html: String) -> [[EpisodeItem]]? {        
-        if let doc = try? HTML(html: html, encoding: .utf8) {
-            
-            let seasonWrapper = doc.css("div[id='season-wrapper']").first!
-            
-            return seasonWrapper.css("ul").reversed().map { seasonList in
-                return seasonList.css("li").reversed().map { (episodeItem) -> EpisodeItem in
-                    return EpisodeItemMapper.map(node: episodeItem)
-                }
+    static func parseEpisodes(from html: String) -> [[EpisodeItem]]? {
+        guard
+            let doc = try? HTML(html: html, encoding: .utf8),
+            let seasonWrapper = doc.css("div[id='season-wrapper']").first
+        else { return nil }
+        
+        return seasonWrapper.css("ul").reversed().map { seasonList in
+            return seasonList.css("li").reversed().map { (episodeItem) -> EpisodeItem in
+                return EpisodeItemMapper.map(node: episodeItem)
             }
-        } else {
-            return nil
         }
     }
 }

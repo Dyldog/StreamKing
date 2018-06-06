@@ -48,7 +48,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="gUi-yU-DmZ">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="HT0-ER-YcR"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="HT0-ER-YcR">
+                            <connections>
+                                <action selector="reloadButtonTapped" destination="JCx-9m-Wns" id="pbs-mq-Fiw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9hK-fm-tGU" userLabel="First Responder" sceneMemberID="firstResponder"/>

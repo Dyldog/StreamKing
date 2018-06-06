@@ -7,7 +7,7 @@
 //
 
 import Foundation
-// import Disk
+
 
 struct ShowItem: Codable {
     var title: String
@@ -15,28 +15,52 @@ struct ShowItem: Codable {
 }
 
 class ShowManager {
-    var shows: [ShowItem] {
-        didSet {
-            saveShowsToDisk()
-        }
-    }
+    
+    static let showDataKey = "SHOW_DATA"
+    
+    var keyStore = NSUbiquitousKeyValueStore()
+    
+    let jsonDecoder = JSONDecoder()
+    let jsonEncoder = JSONEncoder()
+    
+    private(set) var shows: [ShowItem]
+        
     
     init() {
+        keyStore.synchronize()
         shows = []
         loadShowsFromDisk()
     }
     
     private func loadShowsFromDisk() {
-//        if let loadedShows = try? Disk.retrieve("shows.json", from: .applicationSupport, as: [ShowItem].self) {
-//            shows = loadedShows
-//        } else {
-            shows = [
-                .init(title: "The Magicians", url: URL(string: "http://www.streamlord.com/watch-tvshow-the-magicians-286.html")!)
-            ]
-//        }
+        guard let showData = keyStore.data(forKey: ShowManager.showDataKey), let showArray = try? jsonDecoder.decode([ShowItem].self, from: showData) else {
+            shows = [.init(title: "The Magicians", url: URL(string: "http://www.streamlord.com/watch-tvshow-the-magicians-286.html")!)]
+            saveShowsToDisk()
+            return
+        }
+        
+        shows = showArray
     }
     
     private func saveShowsToDisk() {
-        // try? Disk.save(shows, to: .applicationSupport, as: "shows.json")
+        let showData = try! jsonEncoder.encode(shows)
+        keyStore.set(showData, forKey: ShowManager.showDataKey)
+        keyStore.synchronize()
+    }
+    
+    func addShow(_ show: ShowItem) {
+        shows.append(show)
+        saveShowsToDisk()
+    }
+    
+    func removeShow(withName name: String) {
+        guard let showIndex = shows.index(where: { $0.title == name }) else { return }
+        shows.remove(at: showIndex)
+        saveShowsToDisk()
+    }
+    
+    func refreshShows() {
+        keyStore.synchronize()
+        loadShowsFromDisk()
     }
 }
