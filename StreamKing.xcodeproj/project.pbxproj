@@ -30,6 +30,13 @@
 		49A56955209DCA2A00829D5A /* ShowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A56954209DCA2900829D5A /* ShowManager.swift */; };
 		49A56957209DCC6E00829D5A /* Disk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A56956209DCC6E00829D5A /* Disk.framework */; };
 		49A5695A209DCC8E00829D5A /* Disk.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49A56956209DCC6E00829D5A /* Disk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		49F8169720C7797500067614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F8169620C7797500067614 /* AppDelegate.swift */; };
+		49F8169C20C7797500067614 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F8169A20C7797500067614 /* Main.storyboard */; };
+		49F8169E20C7797500067614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F8169D20C7797500067614 /* Assets.xcassets */; };
+		49F816A820C7C6BF00067614 /* ShowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A56954209DCA2900829D5A /* ShowManager.swift */; };
+		49F816A920C7C6C200067614 /* StreamLordParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5694B209DC74B00829D5A /* StreamLordParser.swift */; };
+		49F816AA20C7C6DA00067614 /* ShowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A56943209DBAAA00829D5A /* ShowListViewController.swift */; };
+		49F816AB20C7C6DA00067614 /* EpisodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A56941209DAB8100829D5A /* EpisodeListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -71,6 +78,11 @@
 		49A5694F209DC8E500829D5A /* WebViewWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewWindow.swift; sourceTree = "<group>"; };
 		49A56954209DCA2900829D5A /* ShowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowManager.swift; sourceTree = "<group>"; };
 		49A56956209DCC6E00829D5A /* Disk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Disk.framework; path = Carthage/Build/iOS/Disk.framework; sourceTree = "<group>"; };
+		49F8169420C7797500067614 /* StreamKingTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamKingTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		49F8169620C7797500067614 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		49F8169B20C7797500067614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		49F8169D20C7797500067614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		49F8169F20C7797500067614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,13 +99,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		49F8169120C7797500067614 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		49A5690B209D74C000829D5A = {
 			isa = PBXGroup;
 			children = (
-				49A56916209D74C000829D5A /* StreamKing */,
+				49F816A720C7C69300067614 /* Shared */,
+				49A5694D209DC85900829D5A /* Extensions.swift */,
+				49A56916209D74C000829D5A /* iOS */,
+				49F8169520C7797500067614 /* tvOS */,
 				49A56915209D74C000829D5A /* Products */,
 				49A56929209D769A00829D5A /* Frameworks */,
 			);
@@ -103,28 +125,24 @@
 			isa = PBXGroup;
 			children = (
 				49A56914209D74C000829D5A /* StreamKing.app */,
+				49F8169420C7797500067614 /* StreamKingTV.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		49A56916209D74C000829D5A /* StreamKing */ = {
+		49A56916209D74C000829D5A /* iOS */ = {
 			isa = PBXGroup;
 			children = (
 				49A56917209D74C000829D5A /* AppDelegate.swift */,
-				49A56954209DCA2900829D5A /* ShowManager.swift */,
-				49A5694B209DC74B00829D5A /* StreamLordParser.swift */,
-				49A56953209DC9F600829D5A /* Shows */,
-				49A56952209DC9EE00829D5A /* Episodes */,
 				49A56951209DC9E200829D5A /* Player */,
 				49A5691B209D74C000829D5A /* Main.storyboard */,
 				49A56947209DC28E00829D5A /* URLSelector.storyboard */,
 				49A56949209DC2AE00829D5A /* URLSelectorViewController.swift */,
-				49A5694D209DC85900829D5A /* Extensions.swift */,
 				49A5691E209D74C000829D5A /* Assets.xcassets */,
 				49A56920209D74C000829D5A /* LaunchScreen.storyboard */,
 				49A56923209D74C000829D5A /* Info.plist */,
 			);
-			path = StreamKing;
+			path = iOS;
 			sourceTree = "<group>";
 		};
 		49A56929209D769A00829D5A /* Frameworks */ = {
@@ -166,6 +184,28 @@
 			path = Shows;
 			sourceTree = "<group>";
 		};
+		49F8169520C7797500067614 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				49F8169620C7797500067614 /* AppDelegate.swift */,
+				49F8169A20C7797500067614 /* Main.storyboard */,
+				49F8169D20C7797500067614 /* Assets.xcassets */,
+				49F8169F20C7797500067614 /* Info.plist */,
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
+		49F816A720C7C69300067614 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				49A56954209DCA2900829D5A /* ShowManager.swift */,
+				49A5694B209DC74B00829D5A /* StreamLordParser.swift */,
+				49A56953209DC9F600829D5A /* Shows */,
+				49A56952209DC9EE00829D5A /* Episodes */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,6 +227,23 @@
 			productReference = 49A56914209D74C000829D5A /* StreamKing.app */;
 			productType = "com.apple.product-type.application";
 		};
+		49F8169320C7797500067614 /* StreamKingTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 49F816A020C7797500067614 /* Build configuration list for PBXNativeTarget "StreamKingTV" */;
+			buildPhases = (
+				49F8169020C7797500067614 /* Sources */,
+				49F8169120C7797500067614 /* Frameworks */,
+				49F8169220C7797500067614 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StreamKingTV;
+			productName = StreamKingTV;
+			productReference = 49F8169420C7797500067614 /* StreamKingTV.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -206,6 +263,10 @@
 							};
 						};
 					};
+					49F8169320C7797500067614 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 49A5690F209D74C000829D5A /* Build configuration list for PBXProject "StreamKing" */;
@@ -222,6 +283,7 @@
 			projectRoot = "";
 			targets = (
 				49A56913209D74C000829D5A /* StreamKing */,
+				49F8169320C7797500067614 /* StreamKingTV */,
 			);
 		};
 /* End PBXProject section */
@@ -235,6 +297,15 @@
 				49A56948209DC28E00829D5A /* URLSelector.storyboard in Resources */,
 				49A5691F209D74C000829D5A /* Assets.xcassets in Resources */,
 				49A5691D209D74C000829D5A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49F8169220C7797500067614 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49F8169E20C7797500067614 /* Assets.xcassets in Resources */,
+				49F8169C20C7797500067614 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +328,18 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		49F8169020C7797500067614 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				49F816AB20C7C6DA00067614 /* EpisodeListViewController.swift in Sources */,
+				49F816AA20C7C6DA00067614 /* ShowListViewController.swift in Sources */,
+				49F8169720C7797500067614 /* AppDelegate.swift in Sources */,
+				49F816A820C7C6BF00067614 /* ShowManager.swift in Sources */,
+				49F816A920C7C6C200067614 /* StreamLordParser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
@@ -274,6 +357,14 @@
 				49A56921209D74C000829D5A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		49F8169A20C7797500067614 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				49F8169B20C7797500067614 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -426,6 +517,40 @@
 			};
 			name = Release;
 		};
+		49F816A120C7797500067614 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StreamKingTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylanelliott.StreamKingTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		49F816A220C7797500067614 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = StreamKingTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.dylanelliott.StreamKingTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -443,6 +568,15 @@
 			buildConfigurations = (
 				49A56927209D74C000829D5A /* Debug */,
 				49A56928209D74C000829D5A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		49F816A020C7797500067614 /* Build configuration list for PBXNativeTarget "StreamKingTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				49F816A120C7797500067614 /* Debug */,
+				49F816A220C7797500067614 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
