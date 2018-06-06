@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShowListViewController: UITableViewController, URLSelectorViewControllerDelegate {
+class ShowListViewController: UITableViewController {
     
     let streamLordURL = URL(string: "http://www.streamlord.com/")!
     let showManager = ShowManager()
@@ -55,13 +55,22 @@ class ShowListViewController: UITableViewController, URLSelectorViewControllerDe
     }
     
     @IBAction func addButtonTapped() {
+        #if os(iOS)
         let urlSelectorViewController = UIStoryboard(name: "URLSelector", bundle: .main).instantiateInitialViewController() as! URLSelectorViewController
         urlSelectorViewController.delegate = self
         urlSelectorViewController.webViewURL = streamLordURL
         let navigationController = UINavigationController(rootViewController: urlSelectorViewController)
         self.present(navigationController, animated: true, completion: nil)
+        #endif
     }
     
+    @IBAction func reloadButtonTapped() {
+        
+    }
+}
+
+#if os(iOS)
+extension ShowListViewController: URLSelectorViewControllerDelegate {
     func userDidCancel(in urlSelectorViewController: URLSelectorViewController) {
         urlSelectorViewController.dismiss(animated: true, completion: nil)
     }
@@ -83,8 +92,5 @@ class ShowListViewController: UITableViewController, URLSelectorViewControllerDe
         
         self.tableView.reloadData()
     }
-    
-    @IBAction func reloadButtonTapped() {
-        
-    }
 }
+#endif

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		49A3658E20C7EA4E003CB872 /* StreamLordPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A56919209D74C000829D5A /* StreamLordPlayerViewController.swift */; };
+		49A3658F20C7EB35003CB872 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5694D209DC85900829D5A /* Extensions.swift */; };
 		49A56918209D74C000829D5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A56917209D74C000829D5A /* AppDelegate.swift */; };
 		49A5691A209D74C000829D5A /* StreamLordPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A56919209D74C000829D5A /* StreamLordPlayerViewController.swift */; };
 		49A5691D209D74C000829D5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A5691B209D74C000829D5A /* Main.storyboard */; };
@@ -30,6 +32,14 @@
 		49A56955209DCA2A00829D5A /* ShowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A56954209DCA2900829D5A /* ShowManager.swift */; };
 		49A56957209DCC6E00829D5A /* Disk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A56956209DCC6E00829D5A /* Disk.framework */; };
 		49A5695A209DCC8E00829D5A /* Disk.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49A56956209DCC6E00829D5A /* Disk.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		49C20B8720C7D696003249FF /* Kanna.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49C20B8320C7D55B003249FF /* Kanna.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		49C20B8820C7D6A3003249FF /* Kanna.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C20B8320C7D55B003249FF /* Kanna.framework */; };
+		49C20B8B20C7D6AD003249FF /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C20B8920C7D6AD003249FF /* Result.framework */; };
+		49C20B8C20C7D6AD003249FF /* BrightFutures.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C20B8A20C7D6AD003249FF /* BrightFutures.framework */; };
+		49C20B8D20C7D6B6003249FF /* BrightFutures.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49C20B8A20C7D6AD003249FF /* BrightFutures.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		49C20B8E20C7D6B6003249FF /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49C20B8920C7D6AD003249FF /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		49C20B9120C7D6C2003249FF /* libxml2.2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C20B8F20C7D6C2003249FF /* libxml2.2.tbd */; };
+		49C20B9220C7D6C2003249FF /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 49C20B9020C7D6C2003249FF /* libxml2.tbd */; };
 		49F8169720C7797500067614 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F8169620C7797500067614 /* AppDelegate.swift */; };
 		49F8169C20C7797500067614 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49F8169A20C7797500067614 /* Main.storyboard */; };
 		49F8169E20C7797500067614 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 49F8169D20C7797500067614 /* Assets.xcassets */; };
@@ -50,6 +60,18 @@
 				49A56939209D8AEB00829D5A /* BrightFutures.framework in CopyFiles */,
 				49A5693B209D8AEB00829D5A /* Kanna.framework in CopyFiles */,
 				49A5693C209D8AEB00829D5A /* Result.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		49C20B8620C7D686003249FF /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				49C20B8720C7D696003249FF /* Kanna.framework in CopyFiles */,
+				49C20B8D20C7D6B6003249FF /* BrightFutures.framework in CopyFiles */,
+				49C20B8E20C7D6B6003249FF /* Result.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +100,11 @@
 		49A5694F209DC8E500829D5A /* WebViewWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewWindow.swift; sourceTree = "<group>"; };
 		49A56954209DCA2900829D5A /* ShowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowManager.swift; sourceTree = "<group>"; };
 		49A56956209DCC6E00829D5A /* Disk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Disk.framework; path = Carthage/Build/iOS/Disk.framework; sourceTree = "<group>"; };
+		49C20B8320C7D55B003249FF /* Kanna.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kanna.framework; path = Carthage/Build/tvOS/Kanna.framework; sourceTree = "<group>"; };
+		49C20B8920C7D6AD003249FF /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/tvOS/Result.framework; sourceTree = "<group>"; };
+		49C20B8A20C7D6AD003249FF /* BrightFutures.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = BrightFutures.framework; path = Carthage/Build/tvOS/BrightFutures.framework; sourceTree = "<group>"; };
+		49C20B8F20C7D6C2003249FF /* libxml2.2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.2.tbd; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS11.2.sdk/usr/lib/libxml2.2.tbd; sourceTree = DEVELOPER_DIR; };
+		49C20B9020C7D6C2003249FF /* libxml2.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libxml2.tbd; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS11.2.sdk/usr/lib/libxml2.tbd; sourceTree = DEVELOPER_DIR; };
 		49F8169420C7797500067614 /* StreamKingTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamKingTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49F8169620C7797500067614 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49F8169B20C7797500067614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -103,6 +130,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49C20B9120C7D6C2003249FF /* libxml2.2.tbd in Frameworks */,
+				49C20B9220C7D6C2003249FF /* libxml2.tbd in Frameworks */,
+				49C20B8820C7D6A3003249FF /* Kanna.framework in Frameworks */,
+				49C20B8B20C7D6AD003249FF /* Result.framework in Frameworks */,
+				49C20B8C20C7D6AD003249FF /* BrightFutures.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +180,11 @@
 		49A56929209D769A00829D5A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				49C20B8F20C7D6C2003249FF /* libxml2.2.tbd */,
+				49C20B9020C7D6C2003249FF /* libxml2.tbd */,
+				49C20B8A20C7D6AD003249FF /* BrightFutures.framework */,
+				49C20B8920C7D6AD003249FF /* Result.framework */,
+				49C20B8320C7D55B003249FF /* Kanna.framework */,
 				49A56956209DCC6E00829D5A /* Disk.framework */,
 				49A56945209DBFC900829D5A /* AVKit.framework */,
 				49A5693F209D8B7E00829D5A /* libxml2.tbd */,
@@ -231,6 +268,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 49F816A020C7797500067614 /* Build configuration list for PBXNativeTarget "StreamKingTV" */;
 			buildPhases = (
+				49C20B8620C7D686003249FF /* CopyFiles */,
 				49F8169020C7797500067614 /* Sources */,
 				49F8169120C7797500067614 /* Frameworks */,
 				49F8169220C7797500067614 /* Resources */,
@@ -336,7 +374,9 @@
 				49F816AA20C7C6DA00067614 /* ShowListViewController.swift in Sources */,
 				49F8169720C7797500067614 /* AppDelegate.swift in Sources */,
 				49F816A820C7C6BF00067614 /* ShowManager.swift in Sources */,
+				49A3658E20C7EA4E003CB872 /* StreamLordPlayerViewController.swift in Sources */,
 				49F816A920C7C6C200067614 /* StreamLordParser.swift in Sources */,
+				49A3658F20C7EB35003CB872 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -487,7 +527,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				HEADER_SEARCH_PATHS = "/usr/include/libxml2 ";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dylanelliott.StreamKing;
@@ -507,7 +547,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				HEADER_SEARCH_PATHS = "/usr/include/libxml2 ";
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "$(SRCROOT)/iOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dylanelliott.StreamKing;
@@ -523,6 +563,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "$(SRCROOT)/tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dylanelliott.StreamKingTV;
@@ -540,6 +586,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/tvOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INFOPLIST_FILE = "$(SRCROOT)/tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dylanelliott.StreamKingTV;

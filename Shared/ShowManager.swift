@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Disk
+// import Disk
 
 struct ShowItem: Codable {
     var title: String
@@ -27,16 +27,16 @@ class ShowManager {
     }
     
     private func loadShowsFromDisk() {
-        if let loadedShows = try? Disk.retrieve("shows.json", from: .applicationSupport, as: [ShowItem].self) {
-            shows = loadedShows
-        } else {
+//        if let loadedShows = try? Disk.retrieve("shows.json", from: .applicationSupport, as: [ShowItem].self) {
+//            shows = loadedShows
+//        } else {
             shows = [
                 .init(title: "The Magicians", url: URL(string: "http://www.streamlord.com/watch-tvshow-the-magicians-286.html")!)
             ]
-        }
+//        }
     }
     
     private func saveShowsToDisk() {
-        try? Disk.save(shows, to: .applicationSupport, as: "shows.json")
+        // try? Disk.save(shows, to: .applicationSupport, as: "shows.json")
     }
 }

@@ -33,36 +33,68 @@
             endingLineNumber = "119"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Shared/Episodes/EpisodeListViewController.swift"
+            timestampString = "549973128.192536"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Shared/Episodes/EpisodeListViewController.swift"
+            timestampString = "549973128.192849"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "StreamKing.StreamLordPlayerViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "StreamKing"
+                  symbolName = "closure #1 () -&gt; () in StreamKingTV.EpisodeListViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "StreamKingTV"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/u206246/Code/Mine%20Ideas/StreamKing/StreamKing/ViewController.swift"
-                  timestampString = "547207603.999941"
+                  urlString = "file:///Users/u206246/Code/Mine/StreamKing/Shared/Episodes/EpisodeListViewController.swift"
+                  timestampString = "549972914.195225"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "119"
-                  endingLineNumber = "119"
-                  offsetFromSymbolStart = "75">
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "224">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (StreamKing.Result&lt;Swift.String&gt;) -&gt; () in StreamKing.StreamLordPlayerViewController.viewDidLoad() -&gt; ()"
-                  moduleName = "StreamKing"
+                  symbolName = "implicit closure #1 : @autoclosure () throws -&gt; Swift.Array&lt;Swift.Array&lt;StreamKingTV.EpisodeItem&gt;&gt; in closure #1 () -&gt; () in StreamKingTV.EpisodeListViewController.viewDidLoad() -&gt; ()"
+                  moduleName = "StreamKingTV"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/u206246/Code/Mine%20Ideas/StreamKing/StreamKing/ViewController.swift"
-                  timestampString = "547207604.0025899"
+                  urlString = "file:///Users/u206246/Code/Mine/StreamKing/Shared/Episodes/EpisodeListViewController.swift"
+                  timestampString = "549972914.197044"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "120"
-                  endingLineNumber = "120"
-                  offsetFromSymbolStart = "42">
+                  startingLineNumber = "74"
+                  endingLineNumber = "74"
+                  offsetFromSymbolStart = "62">
                </Location>
             </Locations>
          </BreakpointContent>

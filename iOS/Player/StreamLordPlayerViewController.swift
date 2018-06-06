@@ -8,14 +8,13 @@
 
 import UIKit
 import BrightFutures
-import WebKit
 import AVKit
+import JavaScriptCore
 
 // URL: http://www.streamlord.com/episode-the-magicians-s03e12-18101.html
 
 class StreamLordPlayerViewController: AVPlayerViewController {
 
-    let webViewWindow = StreamLordEpisodeWindow()
     let pageURL: URL
     
     init(pageURL: URL) {
@@ -35,16 +34,11 @@ class StreamLordPlayerViewController: AVPlayerViewController {
     }
     
     private func loadVideo() {
-        webViewWindow.getVideoURL(forPage: pageURL, callback: { result in
-            guard self.player == nil else { return }
-            
-            switch result {
-            case .success(let value):
-                self.loadPlayer(withURL: URL(string: value)!)
-            case .failure(let error):
-                self.alert(title: "Error", message: error.localizedDescription)
-            }
-        })
+        if let videoURLString = getVideoURL(for: pageURL), let videoURL = URL(string: videoURLString) {
+            loadPlayer(withURL: videoURL)
+        } else {
+            alert(title: "Error", message: "Couldn't load video")
+        }
     }
     
     private func loadPlayer(withURL url: URL) {
@@ -59,6 +53,20 @@ class StreamLordPlayerViewController: AVPlayerViewController {
             
             self.player = player
         }
+    }
+    
+    let scriptRegex = try! NSRegularExpression(pattern: "\\\"sources\\\": \\[\\{\\\"default\\\": true, \\\"file\\\": eval\\((.+)\\)", options: [])
+    let context = JSContext()!
+    
+    private func getVideoURL(for pageURL: URL) -> String? {
+        let html = try! String(contentsOf: pageURL)
+
+        let matches = scriptRegex.matches(in: html, options: [], range: NSRange(location: 0, length: html.count))
+        let range = matches.first!.range(at: 1)
+        
+        let script = "eval(\(html.substring(with: Range(range, in: html)!)))"
+        let value = context.evaluateScript(script)
+        return value?.toString()
     }
 }
 
