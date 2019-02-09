@@ -7,12 +7,17 @@
 //
 
 import Foundation
-import AKTrakt
+
+import class AKTrakt.Trakt
+import class AKTrakt.TraktAuthenticationViewController
+import protocol AKTrakt.TraktAuthViewControllerDelegate
+
+import TraktKit
 
 struct ShowItem: Codable {
     var title: String
     var streamLordURL: URL
-	var traktID: TraktIdentifier
+	var traktID: ID
 }
 
 class ShowManager {
@@ -24,23 +29,28 @@ class ShowManager {
     let jsonDecoder = JSONDecoder()
     let jsonEncoder = JSONEncoder()
 	
-	var traktManager: Trakt
-    
+	var traktAuthManager: Trakt
+	var traktAuthDelegate: TraktAuthViewControllerDelegate?
+	var traktContentManager: TraktManager
+	
     private(set) var shows: [ShowItem]
         
     
-	init(trakt: Trakt) {
-		traktManager = trakt
+	init(traktAuth: Trakt, traktContent: TraktManager) {
+		traktAuthManager = traktAuth
+		traktContentManager = traktContent 
 		
         keyStore.synchronize()
         shows = []
         loadShowsFromDisk()
+		
+		if traktIsAuthorised {
+			passTraktTokensToContentManager()
+		}
     }
     
     private func loadShowsFromDisk() {
         guard let showData = keyStore.data(forKey: ShowManager.showDataKey), let showArray = try? jsonDecoder.decode([ShowItem].self, from: showData) else {
-			shows = [.init(title: "The Magicians", streamLordURL: URL(string: "http://www.streamlord.com/watch-tvshow-the-magicians-286.html")!, traktID: 999)]
-            saveShowsToDisk()
             return
         }
         
@@ -70,19 +80,38 @@ class ShowManager {
     }
 }
 
-extension ShowManager {
+extension ShowManager: TraktAuthViewControllerDelegate {
 	var traktIsAuthorised: Bool {
-		return traktManager.token != nil
+		return traktAuthManager.token != nil
+	}
+	
+	func passTraktTokensToContentManager() {
+		traktContentManager.refreshToken = traktAuthManager.token?.refreshToken
+		traktContentManager.accessToken = traktAuthManager.token?.accessToken
 	}
 	
 	func traktAuthenticationViewController(delegate: TraktAuthViewControllerDelegate) -> TraktAuthenticationViewController {
-		return TraktAuthenticationViewController(trakt: traktManager, delegate: delegate)
+		traktAuthDelegate = delegate
+		return TraktAuthenticationViewController(trakt: traktAuthManager, delegate: delegate)
 	}
 	
 	func searchTrakt(showName: String, completion: @escaping ([TraktShow]?) -> ()) {
-		TraktRequestSearch<TraktShow>(query: showName, type: TraktShow.self, year: nil, pagination: nil).request(trakt: traktManager) { (objects, error) in
-			
-			completion(objects as? [TraktShow])
+		traktContentManager.search(query: showName, types: [.show]) { result in
+			switch result {
+			case .success(let results):
+				completion(results.compactMap { $0.show })
+			case .error(_):
+				completion(nil)
+			}
 		}
+	}
+	
+	func TraktAuthViewControllerDidAuthenticate(controller: UIViewController) {
+		traktAuthDelegate?.TraktAuthViewControllerDidAuthenticate(controller: controller)
+		passTraktTokensToContentManager()
+	}
+
+	func TraktAuthViewControllerDidCancel(controller: UIViewController) {
+		traktAuthDelegate?.TraktAuthViewControllerDidCancel(controller: controller)
 	}
 }

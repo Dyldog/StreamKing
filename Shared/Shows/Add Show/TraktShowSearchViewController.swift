@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AKTrakt
+import TraktKit
 
 class TraktShowSearchViewController: UITableViewController {
 	let showManager: ShowManager

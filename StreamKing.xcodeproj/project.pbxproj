@@ -48,6 +48,8 @@
 		49F816A920C7C6C200067614 /* StreamLordParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5694B209DC74B00829D5A /* StreamLordParser.swift */; };
 		49F816AA20C7C6DA00067614 /* ShowListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A56943209DBAAA00829D5A /* ShowListViewController.swift */; };
 		49F816AB20C7C6DA00067614 /* EpisodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A56941209DAB8100829D5A /* EpisodeListViewController.swift */; };
+		6224639E220ECCAE0053A85E /* AppDelegate+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6224639D220ECCAE0053A85E /* AppDelegate+Common.swift */; };
+		6224639F220ECD090053A85E /* AppDelegate+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6224639D220ECCAE0053A85E /* AppDelegate+Common.swift */; };
 		62350056220EA73D00895924 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62350055220EA73D00895924 /* Secrets.swift */; };
 		62350057220EA73D00895924 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62350055220EA73D00895924 /* Secrets.swift */; };
 		62350059220EACBA00895924 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62350058220EACBA00895924 /* Coordinator.swift */; };
@@ -127,6 +129,7 @@
 		49F8169B20C7797500067614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49F8169D20C7797500067614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49F8169F20C7797500067614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6224639D220ECCAE0053A85E /* AppDelegate+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Common.swift"; sourceTree = "<group>"; };
 		62350055220EA73D00895924 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		62350058220EACBA00895924 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		6235005B220EAD4300895924 /* AddShowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShowCoordinator.swift; sourceTree = "<group>"; };
@@ -274,6 +277,7 @@
 		49F816A720C7C69300067614 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				6224639D220ECCAE0053A85E /* AppDelegate+Common.swift */,
 				49A56953209DC9F600829D5A /* Shows */,
 				49A56952209DC9EE00829D5A /* Episodes */,
 				49A56951209DC9E200829D5A /* Player */,
@@ -500,6 +504,7 @@
 				49A56942209DAB8100829D5A /* EpisodeListViewController.swift in Sources */,
 				62350056220EA73D00895924 /* Secrets.swift in Sources */,
 				49A5691A209D74C000829D5A /* StreamLordPlayerViewController.swift in Sources */,
+				6224639E220ECCAE0053A85E /* AppDelegate+Common.swift in Sources */,
 				49A5694A209DC2AE00829D5A /* URLSelectorViewController.swift in Sources */,
 				49A5694C209DC74B00829D5A /* StreamLordParser.swift in Sources */,
 				6235005C220EAD4300895924 /* AddShowCoordinator.swift in Sources */,
@@ -516,6 +521,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6224639F220ECD090053A85E /* AppDelegate+Common.swift in Sources */,
 				49F816AB20C7C6DA00067614 /* EpisodeListViewController.swift in Sources */,
 				62350057220EA73D00895924 /* Secrets.swift in Sources */,
 				49F816AA20C7C6DA00067614 /* ShowListViewController.swift in Sources */,
