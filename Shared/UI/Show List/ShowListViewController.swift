@@ -14,7 +14,7 @@ class ShowListViewController: UITableViewController {
 	var showManager: ShowManager!
 	var addShowCoordinator: AddShowCoordinator!
 	
-    var items: [ShowItem] {
+    var items: [Show] {
         return showManager?.shows ?? []
     }
     

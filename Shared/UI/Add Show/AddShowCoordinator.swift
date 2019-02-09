@@ -67,7 +67,7 @@ extension AddShowCoordinator {
 extension AddShowCoordinator {
 	func showTraktViewController(with streamLordData: (title: String, url: URL)) {
 		let traktSearchVC = TraktShowSearchViewController(showManager: showManager, searchQuery: streamLordData.title, onSelection: { selectedShow in
-			self.showManager.addShow(ShowItem(title: streamLordData.title, streamLordURL: streamLordData.url, traktID: selectedShow.ids))
+			self.showManager.addShow(Show(title: streamLordData.title, streamLordURL: streamLordData.url, traktID: selectedShow.ids))
 			self.rootViewController.presentedViewController?.dismiss(animated: true, completion: nil)
 			self.delegate.userDidAddShow()
 		})

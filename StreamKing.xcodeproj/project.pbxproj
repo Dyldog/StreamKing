@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		09AA8EF2B4CEA93E0A8CD8DE /* libPods-StreamKingTV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D470CA4F2A20522CE7EC6ECE /* libPods-StreamKingTV.a */; };
 		49A3658E20C7EA4E003CB872 /* StreamLordPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A56919209D74C000829D5A /* StreamLordPlayerViewController.swift */; };
-		49A3658F20C7EB35003CB872 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5694D209DC85900829D5A /* Extensions.swift */; };
+		49A3658F20C7EB35003CB872 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5694D209DC85900829D5A /* UIViewController+Alert.swift */; };
 		49A56918209D74C000829D5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A56917209D74C000829D5A /* AppDelegate.swift */; };
 		49A5691A209D74C000829D5A /* StreamLordPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A56919209D74C000829D5A /* StreamLordPlayerViewController.swift */; };
 		49A5691D209D74C000829D5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A5691B209D74C000829D5A /* Main.storyboard */; };
@@ -28,7 +28,7 @@
 		49A56948209DC28E00829D5A /* URLSelector.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 49A56947209DC28E00829D5A /* URLSelector.storyboard */; };
 		49A5694A209DC2AE00829D5A /* URLSelectorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A56949209DC2AE00829D5A /* URLSelectorViewController.swift */; };
 		49A5694C209DC74B00829D5A /* StreamLordParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5694B209DC74B00829D5A /* StreamLordParser.swift */; };
-		49A5694E209DC85900829D5A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5694D209DC85900829D5A /* Extensions.swift */; };
+		49A5694E209DC85900829D5A /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5694D209DC85900829D5A /* UIViewController+Alert.swift */; };
 		49A56950209DC8E500829D5A /* WebViewWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5694F209DC8E500829D5A /* WebViewWindow.swift */; };
 		49A56955209DCA2A00829D5A /* ShowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A56954209DCA2900829D5A /* ShowManager.swift */; };
 		49A56957209DCC6E00829D5A /* Disk.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A56956209DCC6E00829D5A /* Disk.framework */; };
@@ -50,6 +50,9 @@
 		49F816AB20C7C6DA00067614 /* EpisodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A56941209DAB8100829D5A /* EpisodeListViewController.swift */; };
 		6224639E220ECCAE0053A85E /* AppDelegate+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6224639D220ECCAE0053A85E /* AppDelegate+Common.swift */; };
 		6224639F220ECD090053A85E /* AppDelegate+Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6224639D220ECCAE0053A85E /* AppDelegate+Common.swift */; };
+		622463A4220ECF210053A85E /* EpisodeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622463A3220ECF210053A85E /* EpisodeMapper.swift */; };
+		622463A6220ECF400053A85E /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622463A5220ECF400053A85E /* Episode.swift */; };
+		622463A8220ECF520053A85E /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622463A7220ECF520053A85E /* Show.swift */; };
 		62350056220EA73D00895924 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62350055220EA73D00895924 /* Secrets.swift */; };
 		62350057220EA73D00895924 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62350055220EA73D00895924 /* Secrets.swift */; };
 		62350059220EACBA00895924 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62350058220EACBA00895924 /* Coordinator.swift */; };
@@ -113,7 +116,7 @@
 		49A56947209DC28E00829D5A /* URLSelector.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = URLSelector.storyboard; sourceTree = "<group>"; };
 		49A56949209DC2AE00829D5A /* URLSelectorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSelectorViewController.swift; sourceTree = "<group>"; };
 		49A5694B209DC74B00829D5A /* StreamLordParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamLordParser.swift; sourceTree = "<group>"; };
-		49A5694D209DC85900829D5A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		49A5694D209DC85900829D5A /* UIViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		49A5694F209DC8E500829D5A /* WebViewWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebViewWindow.swift; sourceTree = "<group>"; };
 		49A56954209DCA2900829D5A /* ShowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowManager.swift; sourceTree = "<group>"; };
 		49A56956209DCC6E00829D5A /* Disk.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Disk.framework; path = Carthage/Build/iOS/Disk.framework; sourceTree = "<group>"; };
@@ -130,6 +133,9 @@
 		49F8169D20C7797500067614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49F8169F20C7797500067614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6224639D220ECCAE0053A85E /* AppDelegate+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Common.swift"; sourceTree = "<group>"; };
+		622463A3220ECF210053A85E /* EpisodeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeMapper.swift; sourceTree = "<group>"; };
+		622463A5220ECF400053A85E /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		622463A7220ECF520053A85E /* Show.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Show.swift; sourceTree = "<group>"; };
 		62350055220EA73D00895924 /* Secrets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		62350058220EACBA00895924 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		6235005B220EAD4300895924 /* AddShowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShowCoordinator.swift; sourceTree = "<group>"; };
@@ -179,10 +185,11 @@
 				49AF5D7F20C7F0BE006DADCB /* StreamKingTV.entitlements */,
 				49AF5D7E20C7F0B4006DADCB /* StreamKing.entitlements */,
 				49F816A720C7C69300067614 /* Shared */,
-				62350058220EACBA00895924 /* Coordinator.swift */,
-				49A5694D209DC85900829D5A /* Extensions.swift */,
-				62350055220EA73D00895924 /* Secrets.swift */,
+				6224639D220ECCAE0053A85E /* AppDelegate+Common.swift */,
+				49A56954209DCA2900829D5A /* ShowManager.swift */,
 				49A5694B209DC74B00829D5A /* StreamLordParser.swift */,
+				62350058220EACBA00895924 /* Coordinator.swift */,
+				622463AA220ED0330053A85E /* Supporting Files */,
 				49A56916209D74C000829D5A /* iOS */,
 				49F8169520C7797500067614 /* tvOS */,
 				49A56915209D74C000829D5A /* Products */,
@@ -237,30 +244,28 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		49A56951209DC9E200829D5A /* Player */ = {
+		49A56951209DC9E200829D5A /* Episode Player */ = {
 			isa = PBXGroup;
 			children = (
 				49A56919209D74C000829D5A /* StreamLordPlayerViewController.swift */,
 			);
-			path = Player;
+			path = "Episode Player";
 			sourceTree = "<group>";
 		};
-		49A56952209DC9EE00829D5A /* Episodes */ = {
+		49A56952209DC9EE00829D5A /* Episode List */ = {
 			isa = PBXGroup;
 			children = (
 				49A56941209DAB8100829D5A /* EpisodeListViewController.swift */,
 			);
-			path = Episodes;
+			path = "Episode List";
 			sourceTree = "<group>";
 		};
-		49A56953209DC9F600829D5A /* Shows */ = {
+		49A56953209DC9F600829D5A /* Show List */ = {
 			isa = PBXGroup;
 			children = (
-				49A56954209DCA2900829D5A /* ShowManager.swift */,
-				628D39FA220EBA9200E0709B /* Add Show */,
 				49A56943209DBAAA00829D5A /* ShowListViewController.swift */,
 			);
-			path = Shows;
+			path = "Show List";
 			sourceTree = "<group>";
 		};
 		49F8169520C7797500067614 /* tvOS */ = {
@@ -277,10 +282,8 @@
 		49F816A720C7C69300067614 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				6224639D220ECCAE0053A85E /* AppDelegate+Common.swift */,
-				49A56953209DC9F600829D5A /* Shows */,
-				49A56952209DC9EE00829D5A /* Episodes */,
-				49A56951209DC9E200829D5A /* Player */,
+				622463A2220ECF150053A85E /* Model */,
+				622463A9220ECFD80053A85E /* UI */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -296,6 +299,44 @@
 				43D468B2BBC9404A225B5C89 /* Pods-StreamKingTV.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		622463A2220ECF150053A85E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				622463A7220ECF520053A85E /* Show.swift */,
+				622463A5220ECF400053A85E /* Episode.swift */,
+				622463A3220ECF210053A85E /* EpisodeMapper.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		622463A9220ECFD80053A85E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				49A56953209DC9F600829D5A /* Show List */,
+				628D39FA220EBA9200E0709B /* Add Show */,
+				49A56952209DC9EE00829D5A /* Episode List */,
+				49A56951209DC9E200829D5A /* Episode Player */,
+				622463AB220ED09B0053A85E /* Extensions */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		622463AA220ED0330053A85E /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				62350055220EA73D00895924 /* Secrets.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		622463AB220ED09B0053A85E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				49A5694D209DC85900829D5A /* UIViewController+Alert.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		628D39FA220EBA9200E0709B /* Add Show */ = {
@@ -501,17 +542,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				6235005F220EB04000895924 /* TraktShowSearchViewController.swift in Sources */,
+				622463A8220ECF520053A85E /* Show.swift in Sources */,
 				49A56942209DAB8100829D5A /* EpisodeListViewController.swift in Sources */,
 				62350056220EA73D00895924 /* Secrets.swift in Sources */,
 				49A5691A209D74C000829D5A /* StreamLordPlayerViewController.swift in Sources */,
+				622463A6220ECF400053A85E /* Episode.swift in Sources */,
 				6224639E220ECCAE0053A85E /* AppDelegate+Common.swift in Sources */,
+				622463A4220ECF210053A85E /* EpisodeMapper.swift in Sources */,
 				49A5694A209DC2AE00829D5A /* URLSelectorViewController.swift in Sources */,
 				49A5694C209DC74B00829D5A /* StreamLordParser.swift in Sources */,
 				6235005C220EAD4300895924 /* AddShowCoordinator.swift in Sources */,
 				49A56918209D74C000829D5A /* AppDelegate.swift in Sources */,
 				62350059220EACBA00895924 /* Coordinator.swift in Sources */,
 				49A56944209DBAAA00829D5A /* ShowListViewController.swift in Sources */,
-				49A5694E209DC85900829D5A /* Extensions.swift in Sources */,
+				49A5694E209DC85900829D5A /* UIViewController+Alert.swift in Sources */,
 				49A56950209DC8E500829D5A /* WebViewWindow.swift in Sources */,
 				49A56955209DCA2A00829D5A /* ShowManager.swift in Sources */,
 			);
@@ -531,7 +575,7 @@
 				49A3658E20C7EA4E003CB872 /* StreamLordPlayerViewController.swift in Sources */,
 				49F816A920C7C6C200067614 /* StreamLordParser.swift in Sources */,
 				62350060220EB04000895924 /* TraktShowSearchViewController.swift in Sources */,
-				49A3658F20C7EB35003CB872 /* Extensions.swift in Sources */,
+				49A3658F20C7EB35003CB872 /* UIViewController+Alert.swift in Sources */,
 				6235005A220EACBA00895924 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

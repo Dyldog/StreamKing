@@ -26,14 +26,14 @@ class StreamLordParser {
         }
     }
     
-    static func parseEpisodes(from html: String) -> [[EpisodeItem]]? {
+    static func parseEpisodes(from html: String) -> [[Episode]]? {
         guard
             let doc = try? HTML(html: html, encoding: .utf8),
             let seasonWrapper = doc.css("div[id='season-wrapper']").first
         else { return nil }
         
         return seasonWrapper.css("ul").reversed().map { seasonList in
-            return seasonList.css("li").reversed().map { (episodeItem) -> EpisodeItem in
+            return seasonList.css("li").reversed().map { (episodeItem) -> Episode in
                 return EpisodeItemMapper.map(node: episodeItem)
             }
         }

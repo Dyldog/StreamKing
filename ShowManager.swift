@@ -14,12 +14,6 @@ import protocol AKTrakt.TraktAuthViewControllerDelegate
 
 import TraktKit
 
-struct ShowItem: Codable {
-    var title: String
-    var streamLordURL: URL
-	var traktID: ID
-}
-
 class ShowManager {
     
     static let showDataKey = "SHOW_DATA"
@@ -33,7 +27,7 @@ class ShowManager {
 	var traktAuthDelegate: TraktAuthViewControllerDelegate?
 	var traktContentManager: TraktManager
 	
-    private(set) var shows: [ShowItem]
+    private(set) var shows: [Show]
         
     
 	init(traktAuth: Trakt, traktContent: TraktManager) {
@@ -50,7 +44,7 @@ class ShowManager {
     }
     
     private func loadShowsFromDisk() {
-        guard let showData = keyStore.data(forKey: ShowManager.showDataKey), let showArray = try? jsonDecoder.decode([ShowItem].self, from: showData) else {
+        guard let showData = keyStore.data(forKey: ShowManager.showDataKey), let showArray = try? jsonDecoder.decode([Show].self, from: showData) else {
             return
         }
         
@@ -63,7 +57,7 @@ class ShowManager {
         keyStore.synchronize()
     }
     
-    func addShow(_ show: ShowItem) {
+    func addShow(_ show: Show) {
         shows.append(show)
         saveShowsToDisk()
     }
