@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09AA8EF2B4CEA93E0A8CD8DE /* libPods-StreamKingTV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D470CA4F2A20522CE7EC6ECE /* libPods-StreamKingTV.a */; };
+		2558CE5CD6667BD7F5DC5ADD /* Pods_StreamKing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF4F05860E7486AF30698A05 /* Pods_StreamKing.framework */; };
+		2EA499EC44CEA5D2FDE684B8 /* Pods_StreamKingTV.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A615401F121197B73F4F6A51 /* Pods_StreamKingTV.framework */; };
 		49A3658E20C7EA4E003CB872 /* StreamLordPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A56919209D74C000829D5A /* StreamLordPlayerViewController.swift */; };
 		49A3658F20C7EB35003CB872 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A5694D209DC85900829D5A /* UIViewController+Alert.swift */; };
 		49A56918209D74C000829D5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A56917209D74C000829D5A /* AppDelegate.swift */; };
@@ -61,11 +62,13 @@
 		62350059220EACBA00895924 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62350058220EACBA00895924 /* Coordinator.swift */; };
 		6235005A220EACBA00895924 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62350058220EACBA00895924 /* Coordinator.swift */; };
 		6235005C220EAD4300895924 /* AddShowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6235005B220EAD4300895924 /* AddShowCoordinator.swift */; };
-		6235005D220EAD4300895924 /* AddShowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6235005B220EAD4300895924 /* AddShowCoordinator.swift */; };
 		6235005F220EB04000895924 /* TraktShowSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6235005E220EB04000895924 /* TraktShowSearchViewController.swift */; };
 		62350060220EB04000895924 /* TraktShowSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6235005E220EB04000895924 /* TraktShowSearchViewController.swift */; };
-		9E05FA14F1EC088FBFF4DCA6 /* libPods-StreamKing-StreamKingTV.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43035DDEA8BD50AE6CC1C377 /* libPods-StreamKing-StreamKingTV.a */; };
-		F6C5BDBB2BEB28D0186F21DC /* libPods-StreamKing.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3586328A577AB97DFFBF1E3B /* libPods-StreamKing.a */; };
+		62E05655220F00A200E41D14 /* Show.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622463A7220ECF520053A85E /* Show.swift */; };
+		62E05656220F00A200E41D14 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622463A5220ECF400053A85E /* Episode.swift */; };
+		62E05657220F00A200E41D14 /* EpisodeMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622463A3220ECF210053A85E /* EpisodeMapper.swift */; };
+		62E05658220F010200E41D14 /* ShowManager+Episodes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 622463B1220ED3310053A85E /* ShowManager+Episodes.swift */; };
+		62E05659220F010D00E41D14 /* AddShowCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6235005B220EAD4300895924 /* AddShowCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -97,10 +100,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3586328A577AB97DFFBF1E3B /* libPods-StreamKing.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StreamKing.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		18E544D3049E9ECB314B4236 /* Pods-STREEEAAAMZZZZ-StreamKingTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STREEEAAAMZZZZ-StreamKingTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-STREEEAAAMZZZZ-StreamKingTV/Pods-STREEEAAAMZZZZ-StreamKingTV.release.xcconfig"; sourceTree = "<group>"; };
 		3823B73517BE3780BC4FC93C /* Pods-StreamKing-StreamKingTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamKing-StreamKingTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-StreamKing-StreamKingTV/Pods-StreamKing-StreamKingTV.release.xcconfig"; sourceTree = "<group>"; };
 		43035DDEA8BD50AE6CC1C377 /* libPods-StreamKing-StreamKingTV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StreamKing-StreamKingTV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43D468B2BBC9404A225B5C89 /* Pods-StreamKingTV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamKingTV.release.xcconfig"; path = "Pods/Target Support Files/Pods-StreamKingTV/Pods-StreamKingTV.release.xcconfig"; sourceTree = "<group>"; };
+		46C02D067F19BFE2D058D2FE /* Pods-STREEEAAAMZZZZ-StreamKing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STREEEAAAMZZZZ-StreamKing.release.xcconfig"; path = "Pods/Target Support Files/Pods-STREEEAAAMZZZZ-StreamKing/Pods-STREEEAAAMZZZZ-StreamKing.release.xcconfig"; sourceTree = "<group>"; };
+		47516E93A260FBC42152A8B7 /* Pods-STREEEAAAMZZZZ-StreamKingTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STREEEAAAMZZZZ-StreamKingTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STREEEAAAMZZZZ-StreamKingTV/Pods-STREEEAAAMZZZZ-StreamKingTV.debug.xcconfig"; sourceTree = "<group>"; };
 		49A56914209D74C000829D5A /* StreamKing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StreamKing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		49A56917209D74C000829D5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		49A56919209D74C000829D5A /* StreamLordPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamLordPlayerViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +140,7 @@
 		49F8169B20C7797500067614 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		49F8169D20C7797500067614 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		49F8169F20C7797500067614 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B5E15371A014B3D0B23B5D3 /* Pods_STREEEAAAMZZZZ_StreamKingTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STREEEAAAMZZZZ_StreamKingTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6224639D220ECCAE0053A85E /* AppDelegate+Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppDelegate+Common.swift"; sourceTree = "<group>"; };
 		622463A3220ECF210053A85E /* EpisodeMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeMapper.swift; sourceTree = "<group>"; };
 		622463A5220ECF400053A85E /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
@@ -145,11 +151,14 @@
 		62350058220EACBA00895924 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		6235005B220EAD4300895924 /* AddShowCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddShowCoordinator.swift; sourceTree = "<group>"; };
 		6235005E220EB04000895924 /* TraktShowSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraktShowSearchViewController.swift; sourceTree = "<group>"; };
+		651EBD155DFA7213B5F362E0 /* Pods_STREEEAAAMZZZZ_StreamKing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_STREEEAAAMZZZZ_StreamKing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		66C3FF34C0DF6350E73F6988 /* Pods-STREEEAAAMZZZZ-StreamKing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-STREEEAAAMZZZZ-StreamKing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-STREEEAAAMZZZZ-StreamKing/Pods-STREEEAAAMZZZZ-StreamKing.debug.xcconfig"; sourceTree = "<group>"; };
+		A615401F121197B73F4F6A51 /* Pods_StreamKingTV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StreamKingTV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE602C1C28F4B14FB28F114F /* Pods-StreamKing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamKing.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StreamKing/Pods-StreamKing.debug.xcconfig"; sourceTree = "<group>"; };
-		D470CA4F2A20522CE7EC6ECE /* libPods-StreamKingTV.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-StreamKingTV.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC72A1DAEA6540A0C36A9002 /* Pods-StreamKing-StreamKingTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamKing-StreamKingTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StreamKing-StreamKingTV/Pods-StreamKing-StreamKingTV.debug.xcconfig"; sourceTree = "<group>"; };
 		E39C0172817C43F4EA41EEC4 /* Pods-StreamKing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamKing.release.xcconfig"; path = "Pods/Target Support Files/Pods-StreamKing/Pods-StreamKing.release.xcconfig"; sourceTree = "<group>"; };
 		E944FEBDB1D58143D144F307 /* Pods-StreamKingTV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StreamKingTV.debug.xcconfig"; path = "Pods/Target Support Files/Pods-StreamKingTV/Pods-StreamKingTV.debug.xcconfig"; sourceTree = "<group>"; };
+		EF4F05860E7486AF30698A05 /* Pods_StreamKing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StreamKing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,7 +172,7 @@
 				49A56936209D8AE200829D5A /* Result.framework in Frameworks */,
 				49A56937209D8AE200829D5A /* Kanna.framework in Frameworks */,
 				49A56957209DCC6E00829D5A /* Disk.framework in Frameworks */,
-				F6C5BDBB2BEB28D0186F21DC /* libPods-StreamKing.a in Frameworks */,
+				2558CE5CD6667BD7F5DC5ADD /* Pods_StreamKing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,8 +185,7 @@
 				49C20B8820C7D6A3003249FF /* Kanna.framework in Frameworks */,
 				49C20B8B20C7D6AD003249FF /* Result.framework in Frameworks */,
 				49C20B8C20C7D6AD003249FF /* BrightFutures.framework in Frameworks */,
-				9E05FA14F1EC088FBFF4DCA6 /* libPods-StreamKing-StreamKingTV.a in Frameworks */,
-				09AA8EF2B4CEA93E0A8CD8DE /* libPods-StreamKingTV.a in Frameworks */,
+				2EA499EC44CEA5D2FDE684B8 /* Pods_StreamKingTV.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,9 +246,11 @@
 				49A56931209D8AE200829D5A /* BrightFutures.framework */,
 				49A56933209D8AE200829D5A /* Kanna.framework */,
 				49A56932209D8AE200829D5A /* Result.framework */,
-				3586328A577AB97DFFBF1E3B /* libPods-StreamKing.a */,
 				43035DDEA8BD50AE6CC1C377 /* libPods-StreamKing-StreamKingTV.a */,
-				D470CA4F2A20522CE7EC6ECE /* libPods-StreamKingTV.a */,
+				651EBD155DFA7213B5F362E0 /* Pods_STREEEAAAMZZZZ_StreamKing.framework */,
+				4B5E15371A014B3D0B23B5D3 /* Pods_STREEEAAAMZZZZ_StreamKingTV.framework */,
+				EF4F05860E7486AF30698A05 /* Pods_StreamKing.framework */,
+				A615401F121197B73F4F6A51 /* Pods_StreamKingTV.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -304,6 +314,10 @@
 				3823B73517BE3780BC4FC93C /* Pods-StreamKing-StreamKingTV.release.xcconfig */,
 				E944FEBDB1D58143D144F307 /* Pods-StreamKingTV.debug.xcconfig */,
 				43D468B2BBC9404A225B5C89 /* Pods-StreamKingTV.release.xcconfig */,
+				66C3FF34C0DF6350E73F6988 /* Pods-STREEEAAAMZZZZ-StreamKing.debug.xcconfig */,
+				46C02D067F19BFE2D058D2FE /* Pods-STREEEAAAMZZZZ-StreamKing.release.xcconfig */,
+				47516E93A260FBC42152A8B7 /* Pods-STREEEAAAMZZZZ-StreamKingTV.debug.xcconfig */,
+				18E544D3049E9ECB314B4236 /* Pods-STREEEAAAMZZZZ-StreamKingTV.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -367,6 +381,7 @@
 				49A56910209D74C000829D5A /* Sources */,
 				49A56911209D74C000829D5A /* Frameworks */,
 				49A56912209D74C000829D5A /* Resources */,
+				C8BD61DDC897E148AA328137 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -386,7 +401,7 @@
 				49F8169020C7797500067614 /* Sources */,
 				49F8169120C7797500067614 /* Frameworks */,
 				49F8169220C7797500067614 /* Resources */,
-				7D1DA9C1C50065F93FD605EE /* [CP] Copy Pods Resources */,
+				B82801241B5E6C0457F4A634 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -473,30 +488,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		7D1DA9C1C50065F93FD605EE /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-StreamKingTV/Pods-StreamKingTV-resources.sh",
-				"${PODS_ROOT}/AKTrakt/Source/tvos/TraktAuthenticationViewController.xib",
-				"${PODS_ROOT}/AKTrakt/Source/tvos/TraktQRCode.png",
-			);
-			name = "[CP] Copy Pods Resources";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TraktAuthenticationViewController.nib",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TraktQRCode.png",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamKingTV/Pods-StreamKingTV-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		B7116F722B4E4AC08FF5FA3F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -517,6 +508,58 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B82801241B5E6C0457F4A634 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-StreamKingTV/Pods-StreamKingTV-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AKTrakt-tvOS/AKTrakt.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-tvOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/TraktKit-tvOS/TraktKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AKTrakt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TraktKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamKingTV/Pods-StreamKingTV-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C8BD61DDC897E148AA328137 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-StreamKing/Pods-StreamKing-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AKTrakt-iOS/AKTrakt.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/TraktKit-iOS/TraktKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AKTrakt.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TraktKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-StreamKing/Pods-StreamKing-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E1B8033A4AD765431D74FE0E /* [CP] Check Pods Manifest.lock */ = {
@@ -578,14 +621,18 @@
 				6224639F220ECD090053A85E /* AppDelegate+Common.swift in Sources */,
 				49F816AB20C7C6DA00067614 /* EpisodeListViewController.swift in Sources */,
 				62350057220EA73D00895924 /* Secrets.swift in Sources */,
+				62E05655220F00A200E41D14 /* Show.swift in Sources */,
+				62E05659220F010D00E41D14 /* AddShowCoordinator.swift in Sources */,
 				49F816AA20C7C6DA00067614 /* ShowListViewController.swift in Sources */,
 				49F8169720C7797500067614 /* AppDelegate.swift in Sources */,
 				49F816A820C7C6BF00067614 /* ShowManager.swift in Sources */,
-				6235005D220EAD4300895924 /* AddShowCoordinator.swift in Sources */,
+				62E05658220F010200E41D14 /* ShowManager+Episodes.swift in Sources */,
 				49A3658E20C7EA4E003CB872 /* StreamLordPlayerViewController.swift in Sources */,
 				49F816A920C7C6C200067614 /* StreamLordParser.swift in Sources */,
 				62350060220EB04000895924 /* TraktShowSearchViewController.swift in Sources */,
+				62E05657220F00A200E41D14 /* EpisodeMapper.swift in Sources */,
 				49A3658F20C7EB35003CB872 /* UIViewController+Alert.swift in Sources */,
+				62E05656220F00A200E41D14 /* Episode.swift in Sources */,
 				6235005A220EACBA00895924 /* Coordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

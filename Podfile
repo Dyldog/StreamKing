@@ -1,3 +1,6 @@
+
+use_frameworks!
+
 pod "Alamofire", '~> 4.7.3'
 pod 'AKTrakt', :git => 'https://github.com/Dyldog/AKTrakt.git'
 pod 'TraktKit', :git => 'https://github.com/Dyldog/TraktKit.git'

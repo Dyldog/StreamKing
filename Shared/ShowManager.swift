@@ -86,7 +86,7 @@ extension ShowManager: TraktAuthViewControllerDelegate {
 	
 	func traktAuthenticationViewController(delegate: TraktAuthViewControllerDelegate) -> TraktAuthenticationViewController {
 		traktAuthDelegate = delegate
-		return TraktAuthenticationViewController(trakt: traktAuthManager, delegate: delegate)
+		return TraktAuthenticationViewController.credientialViewController(trakt: traktAuthManager, delegate: delegate) as! TraktAuthenticationViewController
 	}
 	
 	func searchTrakt(showName: String, completion: @escaping ([TraktShow]?) -> ()) {

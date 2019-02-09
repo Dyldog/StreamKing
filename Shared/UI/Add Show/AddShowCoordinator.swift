@@ -13,7 +13,7 @@ protocol AddShowCoordinatorDelegate {
 	func userDidCancel()
 }
 
-class AddShowCoordinator: Coordinator, URLSelectorViewControllerDelegate {
+class AddShowCoordinator: Coordinator {
 	
 	let streamLordURL = URL(string: "http://www.streamlord.com/")!
 	let showManager: ShowManager
@@ -26,22 +26,23 @@ class AddShowCoordinator: Coordinator, URLSelectorViewControllerDelegate {
 	}
 	
 	override func show() {
+		#if os(iOS)
 		showStreamLordViewController()
+		#endif
 	}
 	
 	
 }
 
-extension AddShowCoordinator {
+#if os(iOS)
+extension AddShowCoordinator: URLSelectorViewControllerDelegate {
 	private func showStreamLordViewController() {
-		#if os(iOS)
 		let urlSelectorViewController = UIStoryboard(name: "URLSelector", bundle: .main).instantiateInitialViewController() as! URLSelectorViewController
 		urlSelectorViewController.delegate = self
 		urlSelectorViewController.webViewURL = streamLordURL
 		
 		let navigationController = UINavigationController(rootViewController: urlSelectorViewController)
 		rootViewController.present(navigationController, animated: true, completion: nil)
-		#endif
 	}
 	
 	func userDidCancel(in urlSelectorViewController: URLSelectorViewController) {
@@ -63,6 +64,7 @@ extension AddShowCoordinator {
 		
 	}
 }
+#endif
 
 extension AddShowCoordinator {
 	func showTraktViewController(with streamLordData: (title: String, url: URL)) {

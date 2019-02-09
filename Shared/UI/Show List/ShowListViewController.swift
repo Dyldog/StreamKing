@@ -31,6 +31,9 @@ class ShowListViewController: UITableViewController {
 	override func viewDidAppear(_ animated: Bool) {
 		super.viewDidAppear(animated)
 		
+		if showManager.traktIsAuthorised == false {
+			present(showManager.traktAuthenticationViewController(delegate: self), animated: true, completion: nil)
+		}
 	}
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -97,6 +100,4 @@ extension ShowListViewController: AddShowCoordinatorDelegate {
 	}
 	
 	func userDidCancel() { }
-	
-	
 }
