@@ -58,7 +58,7 @@ class EpisodeListViewController: UITableViewController {
     var episodeItems: [[EpisodeItem]] = []
     
     init(showItem: ShowItem) {
-        self.pageURL = showItem.url
+        self.pageURL = showItem.streamLordURL
         super.init(style: .grouped)
         self.title = showItem.title
     }

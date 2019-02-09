@@ -8,6 +8,7 @@
 
 import UIKit
 import AVKit
+import AKTrakt
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+		print(window?.rootViewController)
+		if let navigationController = window?.rootViewController as? UINavigationController, let showListViewController = navigationController.viewControllers[0] as? ShowListViewController {
+			showListViewController.showManager = ShowManager(trakt: Trakt(clientId: Secrets.clientId, clientSecret: Secrets.clientSecret, applicationId: Secrets.applicationId))
+			showListViewController.addShowCoordinator = AddShowCoordinator(rootViewController: showListViewController, delegate: showListViewController, showManager: showListViewController.showManager)
+		}
+		
         return true
     }
 

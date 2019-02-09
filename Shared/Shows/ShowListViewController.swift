@@ -7,13 +7,15 @@
 //
 
 import UIKit
+import AKTrakt
 
 class ShowListViewController: UITableViewController {
-    
-    let streamLordURL = URL(string: "http://www.streamlord.com/")!
-    let showManager = ShowManager()
+	
+	var showManager: ShowManager!
+	var addShowCoordinator: AddShowCoordinator!
+	
     var items: [ShowItem] {
-        return showManager.shows
+        return showManager?.shows ?? []
     }
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
@@ -25,6 +27,11 @@ class ShowListViewController: UITableViewController {
         super.init(coder: aDecoder)
         self.title = "StreamLord"
     }
+	
+	override func viewDidAppear(_ animated: Bool) {
+		super.viewDidAppear(animated)
+		
+	}
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return items.count
@@ -56,13 +63,7 @@ class ShowListViewController: UITableViewController {
     }
     
     @IBAction func addButtonTapped() {
-        #if os(iOS)
-        let urlSelectorViewController = UIStoryboard(name: "URLSelector", bundle: .main).instantiateInitialViewController() as! URLSelectorViewController
-        urlSelectorViewController.delegate = self
-        urlSelectorViewController.webViewURL = streamLordURL
-        let navigationController = UINavigationController(rootViewController: urlSelectorViewController)
-        self.present(navigationController, animated: true, completion: nil)
-        #endif
+        addShowCoordinator.show()
     }
     
     @IBAction func reloadButtonTapped() {
@@ -71,28 +72,31 @@ class ShowListViewController: UITableViewController {
     }
 }
 
-#if os(iOS)
-extension ShowListViewController: URLSelectorViewControllerDelegate {
-    func userDidCancel(in urlSelectorViewController: URLSelectorViewController) {
-        urlSelectorViewController.dismiss(animated: true, completion: nil)
-    }
-    
-    func userDidSelectURL(url: URL, in urlSelectorViewController: URLSelectorViewController) {
-        urlSelectorViewController.dismiss(animated: true, completion: nil)
-        
-        guard let html = try? String(contentsOf: url) else {
-            alert(title: "Error", message: "Couldn't download HTML")
-            return
-        }
-        guard let showTitle = StreamLordParser.parseTitle(from: html) else {
-            alert(title: "Error", message: "Couldn't parse show title")
-            return
-        }
-        
-        let newShow = ShowItem(title: showTitle, url: url)
-        showManager.addShow(newShow)
-        
-        self.tableView.reloadData()
-    }
+extension ShowListViewController: TraktAuthViewControllerDelegate {
+	
+	func showAuthIfNecessary() {
+		if showManager.traktIsAuthorised == false {
+			let authViewController = showManager.traktAuthenticationViewController(delegate: self)
+			present(authViewController, animated: true, completion: nil)
+		}
+	}
+	
+	func TraktAuthViewControllerDidAuthenticate(controller: UIViewController) {
+		showAuthIfNecessary()
+	}
+	
+	func TraktAuthViewControllerDidCancel(controller: UIViewController) {
+		let alert = UIAlertController(title: "No Trakt", message: "Your viewing activity will not be tracked on Trakt. To reattempt Trakt authentication, relaunch the app.", preferredStyle: .alert)
+		alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+	}
 }
-#endif
+
+extension ShowListViewController: AddShowCoordinatorDelegate {
+	func userDidAddShow() {
+		tableView.reloadData()
+	}
+	
+	func userDidCancel() { }
+	
+	
+}

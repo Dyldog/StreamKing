@@ -7,11 +7,12 @@
 //
 
 import Foundation
-
+import AKTrakt
 
 struct ShowItem: Codable {
     var title: String
-    var url: URL
+    var streamLordURL: URL
+	var traktID: TraktIdentifier
 }
 
 class ShowManager {
@@ -22,11 +23,15 @@ class ShowManager {
     
     let jsonDecoder = JSONDecoder()
     let jsonEncoder = JSONEncoder()
+	
+	var traktManager: Trakt
     
     private(set) var shows: [ShowItem]
         
     
-    init() {
+	init(trakt: Trakt) {
+		traktManager = trakt
+		
         keyStore.synchronize()
         shows = []
         loadShowsFromDisk()
@@ -34,7 +39,7 @@ class ShowManager {
     
     private func loadShowsFromDisk() {
         guard let showData = keyStore.data(forKey: ShowManager.showDataKey), let showArray = try? jsonDecoder.decode([ShowItem].self, from: showData) else {
-            shows = [.init(title: "The Magicians", url: URL(string: "http://www.streamlord.com/watch-tvshow-the-magicians-286.html")!)]
+			shows = [.init(title: "The Magicians", streamLordURL: URL(string: "http://www.streamlord.com/watch-tvshow-the-magicians-286.html")!, traktID: 999)]
             saveShowsToDisk()
             return
         }
@@ -63,4 +68,21 @@ class ShowManager {
         keyStore.synchronize()
         loadShowsFromDisk()
     }
+}
+
+extension ShowManager {
+	var traktIsAuthorised: Bool {
+		return traktManager.token != nil
+	}
+	
+	func traktAuthenticationViewController(delegate: TraktAuthViewControllerDelegate) -> TraktAuthenticationViewController {
+		return TraktAuthenticationViewController(trakt: traktManager, delegate: delegate)
+	}
+	
+	func searchTrakt(showName: String, completion: @escaping ([TraktShow]?) -> ()) {
+		TraktRequestSearch<TraktShow>(query: showName, type: TraktShow.self, year: nil, pagination: nil).request(trakt: traktManager) { (objects, error) in
+			
+			completion(objects as? [TraktShow])
+		}
+	}
 }
