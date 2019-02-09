@@ -2,3 +2,5 @@ Carthage
 Cartfile.resolved
 .DS_Store
 xcuserdata
+Pods
+Secrets.swift
