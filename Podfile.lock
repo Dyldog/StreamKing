@@ -2,10 +2,12 @@ PODS:
   - AKTrakt (1.0.1):
     - Alamofire (~> 4.7.3)
   - Alamofire (4.7.3)
+  - TraktKit (1.0.4)
 
 DEPENDENCIES:
   - AKTrakt (from `https://github.com/Dyldog/AKTrakt.git`)
   - Alamofire (~> 4.7.3)
+  - TraktKit (from `https://github.com/Dyldog/TraktKit.git`)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -14,16 +16,22 @@ SPEC REPOS:
 EXTERNAL SOURCES:
   AKTrakt:
     :git: https://github.com/Dyldog/AKTrakt.git
+  TraktKit:
+    :git: https://github.com/Dyldog/TraktKit.git
 
 CHECKOUT OPTIONS:
   AKTrakt:
     :commit: 612f547d3d7dfa66503a8c41dfc0f02b25853c2c
     :git: https://github.com/Dyldog/AKTrakt.git
+  TraktKit:
+    :commit: f2876cb68d08b5ca22ec21ea18e26b889b73f4e6
+    :git: https://github.com/Dyldog/TraktKit.git
 
 SPEC CHECKSUMS:
   AKTrakt: 3571f333784a07c735ef6fcf8f994c03118354c0
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  TraktKit: ab543906c7e0c431c0092abd26a4a9dae6c6de3e
 
-PODFILE CHECKSUM: a7251eeaaf6d6c6d32332ad407c382135bd87a58
+PODFILE CHECKSUM: 06a36df8201eba15b995293e409a7e120166660e
 
 COCOAPODS: 1.5.3
