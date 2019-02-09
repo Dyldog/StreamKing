@@ -15,10 +15,16 @@ import JavaScriptCore
 
 class StreamLordPlayerViewController: AVPlayerViewController {
 
-    let pageURL: URL
+	let episode: Episode
+	
+	let scrobbler: Scrobbler
+	let scroblleID: ScrobbleID
+	
     
-    init(pageURL: URL) {
-        self.pageURL = pageURL
+	init(episode: Episode, scrobbler: Scrobbler, scrobbleID: ScrobbleID) {
+        self.episode = episode
+		self.scrobbler = scrobbler
+		self.scroblleID = scrobbleID
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -34,7 +40,7 @@ class StreamLordPlayerViewController: AVPlayerViewController {
     }
     
     private func loadVideo() {
-        if let videoURLString = getVideoURL(for: pageURL), let videoURL = URL(string: videoURLString) {
+        if let videoURLString = getVideoURL(for: episode.url), let videoURL = URL(string: videoURLString) {
             loadPlayer(withURL: videoURL)
         } else {
             alert(title: "Error", message: "Couldn't load video")
@@ -43,15 +49,17 @@ class StreamLordPlayerViewController: AVPlayerViewController {
     
     private func loadPlayer(withURL url: URL) {
         DispatchQueue.main.async {
+			
             try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: .mixWithOthers)
             try? AVAudioSession.sharedInstance().setActive(true)
             
             let asset = AVURLAsset(url: url)
             let item = AVPlayerItem(asset: asset)
-            let player = AVPlayer(playerItem: item)
-            player.play()
-            
-            self.player = player
+            let player = SKPlayer(playerItem: item)
+			player.delegate = self
+			self.player = player
+			
+			self.player?.play()
         }
     }
     
@@ -68,5 +76,79 @@ class StreamLordPlayerViewController: AVPlayerViewController {
         let value = context.evaluateScript(script)
         return value?.toString()
     }
+	
+	override func viewDidDisappear(_ animated: Bool) {
+		super.viewDidDisappear(animated)
+		self.player = nil
+	}
+	
+	deinit {
+		guard let progress = progress else { return }
+		scrobbler.episodeDidStop(scroblleID, progress: progress)
+	}
 }
 
+extension StreamLordPlayerViewController: SKPlayerDelegate {
+	var progress: Float? {
+		guard let player = player,
+			let currentItem = player.currentItem
+			else { return nil }
+		
+		let currentTime = player.currentTime().seconds
+		let duration = currentItem.duration.seconds
+		return Float(currentTime / duration) * 100.0
+	}
+	func playerDidPlay() {
+		guard let progress = progress else { return }
+		scrobbler.episodeDidPlay(scroblleID, progress: progress)
+	}
+	
+	
+	func playerDidPause() {
+		guard let progress = progress else { return }
+		scrobbler.episodeDidPause(scroblleID, progress: progress)
+	}
+	
+	func playerDidStop() {
+		guard let progress = progress else { return }
+		scrobbler.episodeDidStop(scroblleID, progress: progress)
+	}
+}
+
+protocol SKPlayerDelegate {
+	func playerDidPlay()
+	func playerDidPause()
+	func playerDidStop()
+}
+
+class SKPlayer: AVPlayer {
+	
+	var delegate: SKPlayerDelegate?
+	
+	override init() {
+		super.init()
+		addObserver(self, forKeyPath: "timeControlStatus", options: .new, context: nil)
+	}
+	
+	override init(playerItem item: AVPlayerItem?) {
+		super.init(playerItem: item)
+	}
+	
+	override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+		if let object = object as? SKPlayer, object == self, keyPath == "timeControlStatus" {
+			switch timeControlStatus {
+			case .paused:
+				delegate?.playerDidPause()
+			case .playing:
+				delegate?.playerDidPlay()
+			default:
+				break
+			}
+		}
+	}
+	
+	deinit {
+		removeObserver(self, forKeyPath: "timeControlStatus")
+		delegate?.playerDidStop()
+	}
+}

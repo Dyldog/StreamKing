@@ -10,12 +10,17 @@ import UIKit
 
 class EpisodeListViewController: UITableViewController {
     
-    let pageURL: URL
-    
+	let show: Show
+	let episodeProvider: EpisodeProvider
+	let scrobbler: Scrobbler
+	
     var episodeItems: [[Episode]] = []
     
-    init(showItem: Show) {
-        self.pageURL = showItem.streamLordURL
+	init(showItem: Show, episodeProvider: EpisodeProvider, scrobbler: Scrobbler) {
+        self.show = showItem
+		self.scrobbler = scrobbler
+		self.episodeProvider = episodeProvider
+		
         super.init(style: .grouped)
         self.title = showItem.title
     }
@@ -27,7 +32,7 @@ class EpisodeListViewController: UITableViewController {
     override func viewDidLoad() {
         
         DispatchQueue.main.async {
-            let html = try! String(contentsOf: self.pageURL)
+            let html = try! String(contentsOf: self.show.streamLordURL)
             self.episodeItems = StreamLordParser.parseEpisodes(from: html) ?? [] // TODO: Errors
             self.tableView.reloadData()
         }
@@ -59,7 +64,17 @@ class EpisodeListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = episodeItems[indexPath.section][indexPath.row]
-        let playerViewController = StreamLordPlayerViewController(pageURL: item.url)
-        present(playerViewController, animated: true, completion: nil)
+		
+		episodeProvider.getEpisodeScrobbleID(show: show, number: (indexPath.section + 1, indexPath.row + 1)) { scrobbleID in
+			DispatchQueue.main.async {
+				guard let scrobbleID = scrobbleID else {
+					self.alert(title: "Error", message: "Could not retrieve episode ID")
+					return
+				}
+				
+				let playerViewController = StreamLordPlayerViewController(episode: item, scrobbler: self.scrobbler, scrobbleID: scrobbleID)
+				self.present(playerViewController, animated: true, completion: nil)
+			}
+		}
     }
 }

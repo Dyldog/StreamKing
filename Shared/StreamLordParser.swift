@@ -10,7 +10,7 @@ import Foundation
 import Kanna
 
 class StreamLordParser {
-    static var pageTitleRegex = try! NSRegularExpression(pattern: "Watch ([\\w ]+) \\(", options: [])
+    static var pageTitleRegex = try! NSRegularExpression(pattern: "Watch ([\\w \\-]+) \\(", options: [])
     
     static func parseTitle(from html: String) -> String? {
         if let doc = try? HTML(html: html, encoding: .utf8) {

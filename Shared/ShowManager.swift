@@ -90,14 +90,14 @@ extension ShowManager: TraktAuthViewControllerDelegate {
 	}
 	
 	func searchTrakt(showName: String, completion: @escaping ([TraktShow]?) -> ()) {
-		traktContentManager.search(query: showName, types: [.show]) { result in
+		traktContentManager.search(query: showName, types: [.show], extended: [.Full], pagination: nil, filters: nil, fields: nil) { result in
 			switch result {
 			case .success(let results):
 				completion(results.compactMap { $0.show })
 			case .error(_):
 				completion(nil)
 			}
-		}
+		}		
 	}
 	
 	func TraktAuthViewControllerDidAuthenticate(controller: UIViewController) {

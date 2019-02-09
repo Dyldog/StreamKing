@@ -21,10 +21,10 @@ EXTERNAL SOURCES:
 
 CHECKOUT OPTIONS:
   AKTrakt:
-    :commit: 612f547d3d7dfa66503a8c41dfc0f02b25853c2c
+    :commit: 0e0726f1a7bcbf82ef8a0c915f312782aadd9e6a
     :git: https://github.com/Dyldog/AKTrakt.git
   TraktKit:
-    :commit: f2876cb68d08b5ca22ec21ea18e26b889b73f4e6
+    :commit: 468daf85bb8be8c625d1df0a9757aa95399fa857
     :git: https://github.com/Dyldog/TraktKit.git
 
 SPEC CHECKSUMS:

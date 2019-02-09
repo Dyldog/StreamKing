@@ -58,7 +58,7 @@ class ShowListViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = items[indexPath.row]
-        let showViewController = EpisodeListViewController(showItem: item)
+        let showViewController = EpisodeListViewController(showItem: item, episodeProvider: showManager, scrobbler: showManager)
         navigationController?.pushViewController(showViewController, animated: true)
     }
     
