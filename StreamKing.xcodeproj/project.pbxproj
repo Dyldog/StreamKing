@@ -201,7 +201,7 @@
 			isa = PBXGroup;
 			children = (
 				49A56917209D74C000829D5A /* AppDelegate.swift */,
-				49A56951209DC9E200829D5A /* Player */,
+				49A5694F209DC8E500829D5A /* WebViewWindow.swift */,
 				49A5691B209D74C000829D5A /* Main.storyboard */,
 				49A56947209DC28E00829D5A /* URLSelector.storyboard */,
 				49A56949209DC2AE00829D5A /* URLSelectorViewController.swift */,
@@ -237,7 +237,6 @@
 		49A56951209DC9E200829D5A /* Player */ = {
 			isa = PBXGroup;
 			children = (
-				49A5694F209DC8E500829D5A /* WebViewWindow.swift */,
 				49A56919209D74C000829D5A /* StreamLordPlayerViewController.swift */,
 			);
 			path = Player;
@@ -277,6 +276,7 @@
 			children = (
 				49A56953209DC9F600829D5A /* Shows */,
 				49A56952209DC9EE00829D5A /* Episodes */,
+				49A56951209DC9E200829D5A /* Player */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
