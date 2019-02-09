@@ -43,7 +43,7 @@ class StreamLordPlayerViewController: AVPlayerViewController {
     
     private func loadPlayer(withURL url: URL) {
         DispatchQueue.main.async {
-            try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+            try? AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: .mixWithOthers)
             try? AVAudioSession.sharedInstance().setActive(true)
             
             let asset = AVURLAsset(url: url)
